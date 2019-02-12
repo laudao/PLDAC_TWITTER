@@ -24,7 +24,7 @@ def remove_accents(text):
 
 
 
-def learn_features(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
+def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
     '''
         docs : list of documents
         stopwords : list of stopwords (None if stopwords are to be kept)
@@ -33,7 +33,7 @@ def learn_features(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_pu
         b_punctuation : boolean indicating whether to keep punctuation
         b_accent : boolean indicating whether to keep accents
         max_f : maximum number of top occurring tokens to select
-        learn and return the right features given the above parameter
+        build and return a vectorizer given the above parameter
             along with a list of tuples containing the words and
             their occurrences in the docs
     '''
@@ -67,15 +67,16 @@ def learn_features(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_pu
             stopwords = [remove_accents(w) for w in stopwords]
 
     def clean_doc(s):
-        s = s.replace('#', '')
-
-        if not b_accent:
-            s = remove_accents(s)
-        if "'" in s:
-            s = s.split("'",1)[1]
-        if not ((len(s)<=4 and "'" in s) or "@" in s or "http" in s or len(s) <= 2):
-            return s
-        return ""
+        s = s.split(" ")
+        clean_s = []
+        for token in s:
+            token=token.replace('#','')
+            if "'" in token:
+                token = token.split("'",1)[1]
+            if not ((len(token)<=4 and "'" in token) or "@" in token or "http" in token or len(token) <= 2):
+                clean_s.append(token)
+        clean_s = ' '.join(clean_s)
+        return clean_s
 
     if not (max_f is None):
         print("Keeping the top {} occurring tokens".format(max_f))
@@ -87,14 +88,23 @@ def learn_features(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_pu
     words_freq = [(word, sum_words[0, idx]) for word, idx in vectorizer.vocabulary_.items()]
     words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
 
-    return vectorizer.get_feature_names(), words_freq
+    return vectorizer, words_freq
 
-def vectorize_docs(features, docs):
+def vectorize_docs(vectorizer, docs):
     '''
-        vectorize documents
+        features : vectorizer built beforehand
+        docs : documents to vectorize
+        given a vectorizer, vectorize documents
     '''
-    v = CountVectorizer(vocabulary=features)
-    X = v.fit_transform(docs)
+    X = vectorizer.transform(docs)
     return X.toarray()
 
-
+def cos_sim(a,b):
+    '''
+        a,b : vectors
+        compute cosine similarity between a and b
+    '''
+    dot_product = np.dot(a,b)
+    norm_a = np.linalg.norm(a)
+    norm_b = np.linalg.norm(b)
+    return dot_product / (norm_a * norm_b)
