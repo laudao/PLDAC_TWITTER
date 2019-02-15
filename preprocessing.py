@@ -22,6 +22,30 @@ def remove_accents(text):
 
     return str(text)
 
+def merge_tokens(token):
+    token_ = remove_accents(token.lower())
+    if token_ in ["jlm", "melenchon", "jean-luc"]:
+        return "melenchon"
+    if token_ in ["emmanuel", "macron"]:
+        return "macron"
+    if token_ in ["marine", "marinelepen", "lepen"]:
+        return "marine"
+    if token_ in ["fillon", "françois", "francois"]:
+        return "fillon"
+    return token
+
+def clean_doc(s):
+    s = s.split(" ")
+    clean_s = []
+    for token in s:
+        token = merge_tokens(token)
+        token=token.replace('#','')
+        if "'" in token:
+            token = token.split("'",1)[1]
+        if not ((len(token)<=4 and "'" in token) or "@" in token or "http" in token or len(token) <= 2):
+            clean_s.append(token)
+    clean_s = ' '.join(clean_s)
+    return clean_s
 
 
 def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
@@ -66,17 +90,6 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
         if not (stopwords is None):
             stopwords = [remove_accents(w) for w in stopwords]
 
-    def clean_doc(s):
-        s = s.split(" ")
-        clean_s = []
-        for token in s:
-            token=token.replace('#','')
-            if "'" in token:
-                token = token.split("'",1)[1]
-            if not ((len(token)<=4 and "'" in token) or "@" in token or "http" in token or len(token) <= 2):
-                clean_s.append(token)
-        clean_s = ' '.join(clean_s)
-        return clean_s
 
     if not (max_f is None):
         print("Keeping the top {} occurring tokens".format(max_f))
