@@ -34,19 +34,6 @@ def merge_tokens(token):
         return "fillon"
     return token
 
-def clean_doc(s):
-    s = s.split(" ")
-    clean_s = []
-    for token in s:
-        token = merge_tokens(token)
-        token=token.replace('#','')
-        if "'" in token:
-            token = token.split("'",1)[1]
-        if not ((len(token)<=4 and "'" in token) or "@" in token or "http" in token or len(token) <= 2):
-            clean_s.append(token)
-    clean_s = ' '.join(clean_s)
-    return clean_s
-
 
 def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
     '''
@@ -63,7 +50,7 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
     '''
     tokenizer_ = None
     lower = True
-    token_pattern_ = r'(?u)\b\w\w+\b'
+    #token_pattern_ = "(?u)\b\w\w+\b"
 
     if b_stemming:
         print("Stemming")
@@ -81,20 +68,37 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
     if not b_lowercase:
         print("Keeping uppercase")
         lower = False
-    if b_punctuation:
-        print("Keeping punctuation")
-        token_pattern_ = r'(?u)\b\w\w+\b|!|\?'
+    #if b_punctuation:
+    #    print("Keeping punctuation")
+    #    token_pattern_ = "(?u)\b\w\w+\b|!|\?"
     if not b_accent:
         print("Removing accents")
 
         if not (stopwords is None):
             stopwords = [remove_accents(w) for w in stopwords]
 
-
     if not (max_f is None):
         print("Keeping the top {} occurring tokens".format(max_f))
 
-    vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, lowercase=lower, token_pattern=token_pattern_, max_features=max_f)
+    def clean_doc(s):
+        if b_punctuation:
+            s = re.sub(r"(?<!\!|\?|\.)[!](?!\!|\?|\.)", un_point_excl, s)
+            s = re.sub(r"[!]+"," mult_point_excl ", s)
+
+        s = s.split(" ")
+        clean_s = []
+        for token in s:
+            token = merge_tokens(token)
+            token=token.replace('#','')
+            token=token.replace('@', '')
+            if "'" in token:
+                token = token.split("'",1)[1]
+            if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2):
+                clean_s.append(token)
+        clean_s = ' '.join(clean_s)
+        return clean_s
+
+    vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, lowercase=lower, max_features=max_f)
     X = vectorizer.fit_transform(docs)
 
     sum_words = X.sum(axis=0)
