@@ -6,6 +6,11 @@ from nltk.stem import SnowballStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 import string
 import unicodedata
+import re
+
+punctuation_dict = {'!': 'single_exl', '!!': 'mult_exl', '?': 'single_int',\
+                    '??': 'mult_int', '...': 'susp_pts', '…': 'susp_pts',\
+                    '?!.': 'mixed_m'}
 
 def remove_punctuation(doc):
     return ''.join([char for char in doc if char not in string.punctuation])
@@ -34,6 +39,14 @@ def merge_tokens(token):
         return "fillon"
     return token
 
+def format_punctuation(s):
+    formatted_s = re.sub(r"(?<!\!|\?|\.)[\!](?!\!|\?|\.)"," single_excl ", s)
+    formatted_s = re.sub(r"(?<!\?|\.)[\!]+(?!\?|\.)", " mult_excl ", formatted_s)
+    formatted_s = re.sub(r"(?<!\!|\?|\.)[\?](?!\!|\?|\.)", " single_int ", formatted_s)
+    formatted_s = re.sub(r"(?<!\!|\.)[\?]+(?!\!|\.)", " mult_int ", formatted_s)
+    formatted_s = re.sub(r"(?<!\w)[\.\.]+(?!\w)|…", " susp_pts ", formatted_s)
+    formatted_s = re.sub(r"(?<!\w)[\.|\?|\!]+(?!\w)", " mixed_m ", formatted_s)
+    return formatted_s
 
 def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
     '''
@@ -81,10 +94,6 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
         print("Keeping the top {} occurring tokens".format(max_f))
 
     def clean_doc(s):
-        if b_punctuation:
-            s = re.sub(r"(?<!\!|\?|\.)[!](?!\!|\?|\.)", un_point_excl, s)
-            s = re.sub(r"[!]+"," mult_point_excl ", s)
-
         s = s.split(" ")
         clean_s = []
         for token in s:
