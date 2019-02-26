@@ -1,0 +1,50 @@
+<liste_avis>
+<avis>
+<auteur>sabrina</auteur>
+<note>4</note>
+<point_positif>Bon produit pour un besoin occasionnel</point_positif>
+<point_negatif>rien</point_negatif>
+<date>07/01/2013</date>
+<commentaire>Bon rapport qualité prix pour de l'occasionnel</commentaire>
+</avis>
+<avis>
+<auteur>art</auteur>
+<note>3</note>
+<point_positif>l'intérieur est confortable</point_positif>
+<point_negatif>il n'est pas imperméable à 100% ni au vent froid.</point_negatif>
+<date>18/12/2012</date>
+<commentaire>a partir de 0° il devient difficile d'avoir les mains protégées. Le froid traverse rapidement les gants. c'est un des défauts majeurs.</commentaire>
+</avis>
+<avis>
+<auteur>pierre</auteur>
+<note>3</note>
+<point_positif>souple</point_positif>
+<point_negatif>ne protège pas</point_negatif>
+<date>15/12/2012</date>
+<commentaire>ne protège pas du froid</commentaire>
+</avis>
+<avis>
+<auteur>Robert</auteur>
+<note>5</note>
+<point_positif>Tres chaud, utilisation avec un quad</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>09/12/2012</date>
+<commentaire>Bonne souplesse, ideal pour l'utilisation souhaitee</commentaire>
+</avis>
+<avis>
+<auteur>Tom</auteur>
+<note>5</note>
+<point_positif>chauds,impermeables, rapport qualité/prix</point_positif>
+<point_negatif>Ras</point_negatif>
+<date>07/12/2012</date>
+<commentaire>J'utilise ces gants pour faire du vélo en ville et ça fait du bien de plus avoir les mains gelées. Manque peut être un serrage au niveau du poignet mais à ce prix là faut pas abuser. Tres satisfait.</commentaire>
+</avis>
+<avis>
+<auteur>Aurélie</auteur>
+<note>4</note>
+<point_positif>style</point_positif>
+<point_negatif>pas assez de choix d couleur</point_negatif>
+<date>07/12/2012</date>
+<commentaire>bon rapport qualité/prix</commentaire>
+</avis>
+</liste_avis>

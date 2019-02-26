@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>eddy</auteur>
+<note>4</note>
+<point_positif>légé, estétique et trou pour le serrage</point_positif>
+<point_negatif>il manquait une fente sur l'un des porte plumes</point_negatif>
+<date>03/02/2011</date>
+<commentaire>il manquait une fente sur l'un des porte plumes (défaut d'usinage)</commentaire>
+</avis>
+<avis>
+<auteur>Agnès</auteur>
+<note>4</note>
+<point_positif>la couleur</point_positif>
+<point_negatif>aucun points négatifs</point_negatif>
+<date>02/12/2010</date>
+<commentaire>rien à préciser</commentaire>
+</avis>
+<avis>
+<auteur>eric</auteur>
+<note>5</note>
+<point_positif>légereté rigidité</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>29/10/2010</date>
+<commentaire>excellent</commentaire>
+</avis>
+<avis>
+<auteur>pierre</auteur>
+<note>1</note>
+<point_positif>il n'y en a pas</point_positif>
+<point_negatif>ne remplit pas son rôle de porte-plumes</point_negatif>
+<date>28/10/2010</date>
+<commentaire>ne retiens pas correctement les plumes<br/></commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Renée</auteur>
+<note>5</note>
+<point_positif>trés bonne visibilité , rengement trés pratique</point_positif>
+<point_negatif>prix un peu élevé</point_negatif>
+<date>22/04/2012</date>
+<commentaire>Très bon produit !...</commentaire>
+</avis>
+<avis>
+<auteur>serge</auteur>
+<note>5</note>
+<point_positif>elle est solide</point_positif>
+<point_negatif>neant</point_negatif>
+<date>21/11/2011</date>
+<commentaire>neant</commentaire>
+</avis>
+<avis>
+<auteur>Emmanuel</auteur>
+<note>5</note>
+<point_positif>spatieuse pour sa taille</point_positif>
+<point_negatif>légèrement fragile</point_negatif>
+<date>02/06/2011</date>
+<commentaire>RAS</commentaire>
+</avis>
+<avis>
+<auteur>Philippe</auteur>
+<note>5</note>
+<point_positif>Dimensions idéales</point_positif>
+<point_negatif>Choix des couleurs inexistantes</point_negatif>
+<date>31/05/2011</date>
+<commentaire>Des systèmes type marque page pour indiqués les types de mouches.</commentaire>
+</avis>
+</liste_avis>

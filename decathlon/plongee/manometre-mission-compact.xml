@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>reynald</auteur>
+<note>4</note>
+<point_positif>simple et efficace</point_positif>
+<point_negatif>néant</point_negatif>
+<date>10/10/2012</date>
+<commentaire>néant</commentaire>
+</avis>
+<avis>
+<auteur>GERARD</auteur>
+<note>4</note>
+<point_positif>bonne lecture</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>22/11/2011</date>
+<commentaire>bon produit rapport qualite prix</commentaire>
+</avis>
+<avis>
+<auteur>Alain</auteur>
+<note>4</note>
+<point_positif>il est petit et compact</point_positif>
+<point_negatif>il luis manque de la couleur en plongée</point_negatif>
+<date>27/06/2011</date>
+<commentaire>RAS</commentaire>
+</avis>
+<avis>
+<auteur>Régis</auteur>
+<note>4</note>
+<point_positif>bonne marque, fonctionnel, léger, lisible ...</point_positif>
+<point_negatif>mano neuf a explosé</point_negatif>
+<date>30/05/2011</date>
+<commentaire>il a explosé lors de la vérification matos (surement un défaut )du coup replacement avec le même qui pour l'instant tient bien mais garde toujours une crainte vu la déflagration et les débris</commentaire>
+</avis>
+<avis>
+<auteur>yann</auteur>
+<note>4</note>
+<point_positif>discret</point_positif>
+<point_negatif>lecture difficile</point_negatif>
+<date>03/09/2010</date>
+<commentaire>rapport qualite prix correct</commentaire>
+</avis>
+</liste_avis>

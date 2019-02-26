@@ -1,0 +1,50 @@
+<liste_avis>
+<avis>
+<auteur>Katia</auteur>
+<note>5</note>
+<point_positif>résisante</point_positif>
+<point_negatif>néant</point_negatif>
+<date>12/12/2011</date>
+<commentaire>très bon produit, réglable, parfait</commentaire>
+</avis>
+<avis>
+<auteur>jack</auteur>
+<note>4</note>
+<point_positif>se positionne bien sur la tete</point_positif>
+<point_negatif>aucun point négatif</point_negatif>
+<date>03/02/2011</date>
+<commentaire>a recommander</commentaire>
+</avis>
+<avis>
+<auteur>ISABELLE</auteur>
+<note>4</note>
+<point_positif>Agréable à porter, très bonne protection</point_positif>
+<point_negatif>visière trop longue</point_negatif>
+<date>02/12/2010</date>
+<commentaire>Mettre une doublure</commentaire>
+</avis>
+<avis>
+<auteur>marie</auteur>
+<note>5</note>
+<point_positif>tiens bien en place sur la tete</point_positif>
+<point_negatif>pas trouvé</point_negatif>
+<date>02/12/2010</date>
+<commentaire>pratique</commentaire>
+</avis>
+<avis>
+<auteur>ANDRE</auteur>
+<note>4</note>
+<point_positif>LA SOUPLESSE</point_positif>
+<point_negatif>RAS</point_negatif>
+<date>01/11/2010</date>
+<commentaire>RAS</commentaire>
+</avis>
+<avis>
+<auteur>albert</auteur>
+<note>4</note>
+<point_positif>confortable</point_positif>
+<point_negatif>na</point_negatif>
+<date>28/10/2010</date>
+<commentaire>Rapport qualité prix</commentaire>
+</avis>
+</liste_avis>

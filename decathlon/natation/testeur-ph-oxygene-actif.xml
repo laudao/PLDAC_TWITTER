@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Catherine</auteur>
+<note>5</note>
+<point_positif>seul test d'oxygène actif</point_positif>
+<point_negatif>rien</point_negatif>
+<date>05/10/2012</date>
+<commentaire>Je suis ravie d'avoir trouvé chez Decathlon, ce produit que j'utilise régulièrement.</commentaire>
+</avis>
+<avis>
+<auteur>mickael</auteur>
+<note>4</note>
+<point_positif>testeur simple</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>04/09/2012</date>
+<commentaire>testeur simple et rapide</commentaire>
+</avis>
+<avis>
+<auteur>stolbowsky</auteur>
+<note>4</note>
+<point_positif>pratique rapide</point_positif>
+<point_negatif>un peu onereux</point_negatif>
+<date>28/06/2011</date>
+<commentaire>Un testeur pour piscine traitée à l'oxygène, je n'arrive jamais à avoir une mesure pour l'oxygène bien que ma piscine soit traitée par galets tout les 4 jours. Efficace pour le côté ph. boite pratique pour le rangement.</commentaire>
+</avis>
+<avis>
+<auteur>Julien</auteur>
+<note>5</note>
+<point_positif>2 tests en 1 - réaction rapide</point_positif>
+<point_negatif>Prix</point_negatif>
+<date>04/09/2010</date>
+<commentaire>Enfin un test rapide Ph et O2.<br/>Il suffit de mettre de l'eau, les comprimés, on ferme et on a le résultat.</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>Jean-Luc</auteur>
+<note>5</note>
+<point_positif>Facilité de repérage visuel</point_positif>
+<point_negatif>Le cordage s'embrouille</point_negatif>
+<date>29/06/2012</date>
+<commentaire>L'utilisation de la sonde est trés facile grâce à son code couleur pour estimer la profondeur.<br/>Par contre pour éviter l'embrouillamini du cordage, j'ai fabriqué un support pour une vraiment meilleure utilisation.</commentaire>
+</avis>
+<avis>
+<auteur>Georges</auteur>
+<note>5</note>
+<point_positif>Peu encombrant mais pratique</point_positif>
+<point_negatif>Risque d'emmélage</point_negatif>
+<date>27/08/2011</date>
+<commentaire>aurait dû être livré sur un plioir en mousse</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,50 @@
+<liste_avis>
+<avis>
+<auteur>jean-christophe</auteur>
+<note>3</note>
+<point_positif>souple</point_positif>
+<point_negatif>pas assez haut</point_negatif>
+<date>05/02/2011</date>
+<commentaire>bon article</commentaire>
+</avis>
+<avis>
+<auteur>thierry</auteur>
+<note>4</note>
+<point_positif>solide</point_positif>
+<point_negatif>la pointe</point_negatif>
+<date>02/12/2010</date>
+<commentaire>pointe un peu courte = les tees volent loin<br/>hauteur adapté à mon drive car je rase le sol</commentaire>
+</avis>
+<avis>
+<auteur>jean-claude</auteur>
+<note>4</note>
+<point_positif>prix; ne cassent pas</point_positif>
+<point_negatif>ras</point_negatif>
+<date>28/10/2010</date>
+<commentaire>Impeccable pour un débuant comme moi.</commentaire>
+</avis>
+<avis>
+<auteur>Denis</auteur>
+<note>5</note>
+<point_positif>Prise en mains pr l'enfoncer - Hauteur constante</point_positif>
+<point_negatif>Néant</point_negatif>
+<date>28/10/2010</date>
+<commentaire>Plastique mi souple : ne casse pas facilement<br/>Prix compétitif</commentaire>
+</avis>
+<avis>
+<auteur>Gérald</auteur>
+<note>4</note>
+<point_positif>Solide, bien adapté.</point_positif>
+<point_negatif>Un peu souple si sol dur</point_negatif>
+<date>28/10/2010</date>
+<commentaire>Bon rapport qualité / prix</commentaire>
+</avis>
+<avis>
+<auteur>JEAN PHILIPPE</auteur>
+<note>3</note>
+<point_positif>le prix</point_positif>
+<point_negatif>la taille est légèrement trop haute</point_negatif>
+<date>07/10/2009</date>
+<commentaire>un tee trop haut pour les bois de parcours</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Alain</auteur>
+<note>4</note>
+<point_positif>Bonne réussite dans l'utilisation</point_positif>
+<point_negatif>Aucuns</point_negatif>
+<date>07/09/2012</date>
+<commentaire>pour une première utilisation, bon point</commentaire>
+</avis>
+<avis>
+<auteur>laurent</auteur>
+<note>3</note>
+<point_positif>utilisation aisée</point_positif>
+<point_negatif>encore rien péché  !!</point_negatif>
+<date>01/10/2010</date>
+<commentaire>heureusement, prix abordable</commentaire>
+</avis>
+<avis>
+<auteur>sophie</auteur>
+<note>4</note>
+<point_positif>peu encombrant</point_positif>
+<point_negatif>s'emelle un peu</point_negatif>
+<date>03/09/2010</date>
+<commentaire>bien pour débuter</commentaire>
+</avis>
+</liste_avis>

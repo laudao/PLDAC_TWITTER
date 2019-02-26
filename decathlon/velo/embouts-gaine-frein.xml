@@ -1,0 +1,50 @@
+<liste_avis>
+<avis>
+<auteur>audrey</auteur>
+<note>5</note>
+<point_positif>la qualité</point_positif>
+<point_negatif>rien à dire</point_negatif>
+<date>04/02/2011</date>
+<commentaire>je sius satisfaitez des produits que j'achette chez vous.il y a la qualité et les prix raisonnable et accésible a tous.</commentaire>
+</avis>
+<avis>
+<auteur>luc</auteur>
+<note>2</note>
+<point_positif>montage facile</point_positif>
+<point_negatif>trop cher pour du plastique</point_negatif>
+<date>09/10/2010</date>
+<commentaire>rien a rajouter</commentaire>
+</avis>
+<avis>
+<auteur>virgile</auteur>
+<note>4</note>
+<point_positif>simple</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>06/10/2010</date>
+<commentaire>efficace et pas cher</commentaire>
+</avis>
+<avis>
+<auteur>Jean-luc</auteur>
+<note>4</note>
+<point_positif>aucun</point_positif>
+<point_negatif>conditionnement par 10</point_negatif>
+<date>30/09/2010</date>
+<commentaire>on est obligé d'acheter 10 embouts quand on a besoin de 4 embouts. Pas très écologique !</commentaire>
+</avis>
+<avis>
+<auteur>stéphane</auteur>
+<note>4</note>
+<point_positif>qualité et tarif</point_positif>
+<point_negatif>sans</point_negatif>
+<date>30/09/2010</date>
+<commentaire>bien pratique pour faire durer la vie des gaines</commentaire>
+</avis>
+<avis>
+<auteur>JEROME</auteur>
+<note>4</note>
+<point_positif>Prix, qualité</point_positif>
+<point_negatif>Ne s'adapte pas aux vélos anciens</point_negatif>
+<date>23/06/2010</date>
+<commentaire>Très bien pour le bricolage du vélo à la maison!<br/>Facile à trouver en rayon.<br/>La qualité et le prix !</commentaire>
+</avis>
+</liste_avis>

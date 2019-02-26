@@ -1,0 +1,82 @@
+<liste_avis>
+<avis>
+<auteur>laurent</auteur>
+<note>3</note>
+<point_positif>facile  d'utilisation lors des séances</point_positif>
+<point_negatif>Problème de connection avec PC</point_negatif>
+<date>20/01/2013</date>
+<commentaire>Je suis trés content de cette montre lors des séances, mais je ne peux pas tranférer les données sur l'ordi (méssage d'erreur: Vérifier que les indication de la BD ont été suivies), pouvez vous  m'indiquer ce que je dois faire.</commentaire>
+</avis>
+<avis>
+<auteur>ludovic</auteur>
+<note>5</note>
+<point_positif>simple d' utilisation</point_positif>
+<point_negatif>regret sur l' absence d' un cardiofrequencemetre</point_negatif>
+<date>18/01/2013</date>
+<commentaire>très bon produit , qui permet une prise en main rapide.<br/>cette montre fait le principale pour une activité sportive-loisir<br/>installation pc assez simple . pour les personnes qui n' arrivent pas a transférer leur données , pensez a installer les drivers de la montres j' ai rencontrer le meme problème.</commentaire>
+</avis>
+<avis>
+<auteur>Jojo</auteur>
+<note>4</note>
+<point_positif>Simple à l'utilisation, précis, bon marché</point_positif>
+<point_negatif>Connexion au PC (drivers non fournis)</point_negatif>
+<date>17/01/2013</date>
+<commentaire>Simple à utilisé et fait bien ce pour quoi elle est prévue.<br/>Possibilité d'importer les données dans Onconnect et dans Geonaute software (avec lequel on peut ajouter l'altitude en exportant le fichier de données puis en le réimportant modifié)<br/></commentaire>
+</avis>
+<avis>
+<auteur>dominique</auteur>
+<note>1</note>
+<point_positif>donne l'heure et bon chronometre</point_positif>
+<point_negatif>connexion gps impossible apres 3 séances</point_negatif>
+<date>16/01/2013</date>
+<commentaire>apres 3 seances la montre ne se connecte plus en GPS  (2 heures de marche à la campagne sans connexion gps !)<br/>je n'ai pas réussi à la connecter sur les logiciels geonaute software et ONconnect (pas de reconnaissance de la montre)<br/>je suis tres déçu, j'ai 30 km à faire pour retourner au magasin</commentaire>
+</avis>
+<avis>
+<auteur>Eric</auteur>
+<note>4</note>
+<point_positif>relativement precis / simple d'utilisation</point_positif>
+<point_negatif>je n'arrive pas à lier la montre au site geonaute</point_negatif>
+<date>10/01/2013</date>
+<commentaire>Je l'ai offert a ma copine pour une utilisation running et je la lui emprunte regulierement pour des sorties velo. J'en suis pleinement satisfait compte tenu de mon utilisation (sport loisir). Les informations fournies me suffisent amplemant (vitesse, vitesse moyenne, temps, vitesse max). Pour le prix, je suis satisfait du produit.</commentaire>
+</avis>
+<avis>
+<auteur>neoa</auteur>
+<note>3</note>
+<point_positif>pratique</point_positif>
+<point_negatif>impossible de transférer les données</point_negatif>
+<date>06/01/2013</date>
+<commentaire>première séance, première désillusion : impossible de transférer les données !! La pince est pourtant bien fixée, j'ai téléchargé le logiciel, mais rien ne se passe ! Que faire ?</commentaire>
+</avis>
+<avis>
+<auteur>nathalie</auteur>
+<note>3</note>
+<point_positif>facile d'utilisation sur la montre</point_positif>
+<point_negatif>ne tient pas en charge</point_negatif>
+<date>05/01/2013</date>
+<commentaire>déçue, n'indique pas les bons km, ni le temps réel, pas facile de suivre son parcours sur internet via le site<br/>achat en octobre et déjà en service après vente. j'espere un échange rapide et de bons conseils pour une meilleure utilisation</commentaire>
+</avis>
+<avis>
+<auteur>Guillaume</auteur>
+<note>5</note>
+<point_positif>RAS</point_positif>
+<point_negatif>RAS</point_negatif>
+<date>05/01/2013</date>
+<commentaire>Ok, le problème ne venait effectivement pas du serveur mais de  l’antivirus Avast qui bloquait la connexion.  Tout fonctionne bien, j'ai aussi installé le logiciel geonaute software qui est très complet et a mon sens mieux que my geonaute. Surprenant qu'il ne soit mentionné ni sur la boite, ni sur la notice (très succinte) et ni mentionné par le vendeur.</commentaire>
+</avis>
+<avis>
+<auteur>JOEL</auteur>
+<note>4</note>
+<point_positif>SIMPLICITE D UTILISATION</point_positif>
+<point_negatif>PAS DE BOUSSOLE</point_negatif>
+<date>04/01/2013</date>
+<commentaire>ce produit n'ayant pas de passerelle d'exportation GPX, n'est pas utile pour un randonneur. La fonction "exportation GPX" ne fonctionne pas. ci dessous la réponse de Géonaute :<br/>Merci de votre retour.<br/>Cette fonctionnalité est en cours de développement et ne peut pas être utilisé pour le moment.<br/>Je vous prie de bien vouloir nous excuser pour la gène occasionnée.<br/>Cordialement,<br/>L'équipe Geonaute Support.<br/></commentaire>
+</avis>
+<avis>
+<auteur>Ali</auteur>
+<note>4</note>
+<point_positif>Facile à utiliser</point_positif>
+<point_negatif>notice bcp trop sommaire</point_negatif>
+<date>01/01/2013</date>
+<commentaire>J'ai reçu ce géonaute et n'ai pas eu de problème ni pour la géolocalisation ni pour le chrono. Par contre impossible d'importer les données de la montre sur mon PC. Dès que je la branche sur le PC celà m'indique: " télécharger CP2102 USBto UART Bridge Controller". lorsque j'essaie on me demande d'insérer un disque? Je ne suis pas très doué mais il est impossible de lire les données...</commentaire>
+</avis>
+</liste_avis>

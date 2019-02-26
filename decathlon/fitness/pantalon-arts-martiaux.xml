@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Miguel</auteur>
+<note>5</note>
+<point_positif>solide et légers</point_positif>
+<point_negatif>manque elastique au niveau des chevilles</point_negatif>
+<date>05/12/2012</date>
+<commentaire>tres bon produit, légers à porter permet de réaliser tous les mouvement que l'on souhaite. dommage qu'il n'y a pas d'elastiques sur le bas du pantalon. <br/>avec ce detai le pantalon serait parfait.</commentaire>
+</avis>
+<avis>
+<auteur>Bruno</auteur>
+<note>4</note>
+<point_positif>qualité du tissus</point_positif>
+<point_negatif>pas d'elastiques aux chevilles</point_negatif>
+<date>02/12/2012</date>
+<commentaire>il aurait fallu intégrer des élastiques aux chevilles, pratique du kung fu</commentaire>
+</avis>
+<avis>
+<auteur>Joffrey</auteur>
+<note>4</note>
+<point_positif>Toile épaisse, solide.</point_positif>
+<point_negatif>---</point_negatif>
+<date>01/12/2012</date>
+<commentaire>Bon rapport qualité/prix.<br/>Tous les mouvements sont réalisés sans gènes.</commentaire>
+</avis>
+<avis>
+<auteur>Quentin</auteur>
+<note>5</note>
+<point_positif>Solide</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>06/10/2012</date>
+<commentaire>Rien</commentaire>
+</avis>
+</liste_avis>

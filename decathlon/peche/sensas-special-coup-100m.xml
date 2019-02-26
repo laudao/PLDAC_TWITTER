@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Julien</auteur>
+<note>5</note>
+<point_positif>Solide, qualité au rdv</point_positif>
+<point_negatif>prix</point_negatif>
+<date>26/09/2011</date>
+<commentaire>Je n'ai jamais cassé avec, fiable</commentaire>
+</avis>
+<avis>
+<auteur>florent</auteur>
+<note>5</note>
+<point_positif>prix, rapport diametre / resistance</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>13/06/2011</date>
+<commentaire>je peche avec depuis des années, je ne changerais pas pour un autre.</commentaire>
+</avis>
+<avis>
+<auteur>Baptiste</auteur>
+<note>5</note>
+<point_positif>le prix et la qualité du produit</point_positif>
+<point_negatif>rien n'a mon goût</point_negatif>
+<date>11/12/2010</date>
+<commentaire>Très bon nylon pour monté les lignes pour la pêche au coup</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>François</auteur>
+<note>5</note>
+<point_positif>qualité</point_positif>
+<point_negatif>diamètre</point_negatif>
+<date>03/12/2012</date>
+<commentaire>pêche dorénavant seulement en montage équilibré</commentaire>
+</avis>
+<avis>
+<auteur>jerome</auteur>
+<note>5</note>
+<point_positif>excelent parfum</point_positif>
+<point_negatif>un peu tendre quand elles sont fraiche</point_negatif>
+<date>03/07/2012</date>
+<commentaire>produit à effet instantanné</commentaire>
+</avis>
+<avis>
+<auteur>dubs</auteur>
+<note>4</note>
+<point_positif>toujours des touches avec ce produit</point_positif>
+<point_negatif>rien</point_negatif>
+<date>03/07/2012</date>
+<commentaire>On est jamais déçu d'une année sur l'autre</commentaire>
+</avis>
+<avis>
+<auteur>yannick</auteur>
+<note>3</note>
+<point_positif>nombreux départs</point_positif>
+<point_negatif>que du silure</point_negatif>
+<date>27/06/2012</date>
+<commentaire>bonne bouillette mais si il y a des silures vous êtes c'est pas la peine</commentaire>
+</avis>
+<avis>
+<auteur>philippe</auteur>
+<note>5</note>
+<point_positif>jamais deçu avec ce produit</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>30/09/2011</date>
+<commentaire>ce produit fait un carton.</commentaire>
+</avis>
+</liste_avis>

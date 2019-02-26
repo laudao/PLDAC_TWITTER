@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>renald</auteur>
+<note>4</note>
+<point_positif>ne prend pas de place</point_positif>
+<point_negatif>la peinture part</point_negatif>
+<date>30/08/2012</date>
+<commentaire>ras</commentaire>
+</avis>
+<avis>
+<auteur>Bruno</auteur>
+<note>4</note>
+<point_positif>Ne contient pas de plomb, bonne finition</point_positif>
+<point_negatif>Prix élévé mais sembable aux autres enseignes</point_negatif>
+<date>05/07/2012</date>
+<commentaire>Ca coule et c'est ce qu'on lui demande.<br/>Ne contient pas de plomb donc à priori mieux pour la santé et l'environnement?<br/>Bonne finition comparé à un plomb brute.</commentaire>
+</avis>
+<avis>
+<auteur>Etienne</auteur>
+<note>5</note>
+<point_positif>ergonomique et pratique</point_positif>
+<point_negatif>Manque de couleurs vives</point_negatif>
+<date>02/07/2012</date>
+<commentaire>Bon rapport qualité prix pour ce produit.</commentaire>
+</avis>
+</liste_avis>

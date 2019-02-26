@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>B</auteur>
+<note>4</note>
+<point_positif>très pratique</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>03/12/2012</date>
+<commentaire>je lerecommande</commentaire>
+</avis>
+<avis>
+<auteur>Lucie</auteur>
+<note>5</note>
+<point_positif>Pince très pratique !</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>06/09/2012</date>
+<commentaire>Pince multifonctions très pratique et solide !</commentaire>
+</avis>
+<avis>
+<auteur>Thouthéa</auteur>
+<note>4</note>
+<point_positif>bec long c'est assez pratique</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>01/03/2012</date>
+<commentaire>bon produit, pratique et polyvalent</commentaire>
+</avis>
+<avis>
+<auteur>ERIC</auteur>
+<note>4</note>
+<point_positif>pratique et ergonomique</point_positif>
+<point_negatif>sujet à l'oxidation</point_negatif>
+<date>22/11/2011</date>
+<commentaire>produit adapté à la rivière mais malheureusement pas à la mer</commentaire>
+</avis>
+<avis>
+<auteur>Nicolas</auteur>
+<note>4</note>
+<point_positif>solide, pratique</point_positif>
+<point_negatif>un peu encombrant</point_negatif>
+<date>30/05/2011</date>
+<commentaire>Pince simple et pratique, outil de bonn qualité.</commentaire>
+</avis>
+</liste_avis>

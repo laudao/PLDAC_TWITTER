@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Nathalie</auteur>
+<note>4</note>
+<point_positif>Souple</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>28/06/2012</date>
+<commentaire>Mon fils a tout de suite aimé jouer avec ce bois</commentaire>
+</avis>
+<avis>
+<auteur>baptiste</auteur>
+<note>5</note>
+<point_positif>puissant et léger pour des enfants</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>18/06/2012</date>
+<commentaire>très bon driver</commentaire>
+</avis>
+<avis>
+<auteur>Noé</auteur>
+<note>5</note>
+<point_positif>gain de 50 mètres de longueur</point_positif>
+<point_negatif>rien</point_negatif>
+<date>28/08/2011</date>
+<commentaire>très bon driver</commentaire>
+</avis>
+</liste_avis>

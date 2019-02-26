@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>fabrice</auteur>
+<note>4</note>
+<point_positif>bonne qualité</point_positif>
+<point_negatif>rien pour l'instant</point_negatif>
+<date>06/12/2012</date>
+<commentaire>Bonne qualité a voir avec le temps</commentaire>
+</avis>
+<avis>
+<auteur>bernard</auteur>
+<note>4</note>
+<point_positif>souple facile à charger</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>10/10/2012</date>
+<commentaire>bon produit</commentaire>
+</avis>
+<avis>
+<auteur>Kad</auteur>
+<note>4</note>
+<point_positif>Souplesse</point_positif>
+<point_negatif>Dureté</point_negatif>
+<date>02/10/2012</date>
+<commentaire>Bonne chasse</commentaire>
+</avis>
+<avis>
+<auteur>patrick</auteur>
+<note>4</note>
+<point_positif>simplicité de montage</point_positif>
+<point_negatif>prix exessif pour un bout de caoutchouc.</point_negatif>
+<date>06/09/2012</date>
+<commentaire>il n'y a pas toutes les dimensions en magasin.</commentaire>
+</avis>
+<avis>
+<auteur>michel</auteur>
+<note>2</note>
+<point_positif>aucun</point_positif>
+<point_negatif>manque de puissance</point_negatif>
+<date>28/06/2012</date>
+<commentaire>sandow n'ayant pas de puissance  et vendu au même prix que les bonnes marques.</commentaire>
+</avis>
+</liste_avis>

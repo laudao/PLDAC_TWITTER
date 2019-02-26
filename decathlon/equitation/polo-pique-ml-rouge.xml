@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Virginie</auteur>
+<note>4</note>
+<point_positif>matiere</point_positif>
+<point_negatif>pas de point negatif</point_negatif>
+<date>03/12/2012</date>
+<commentaire>beau polo rouge pour un garçon !</commentaire>
+</avis>
+<avis>
+<auteur>Severine</auteur>
+<note>5</note>
+<point_positif>resistant o lavage et o sechage</point_positif>
+<point_negatif>rien a signaler</point_negatif>
+<date>03/12/2012</date>
+<commentaire>tres bon produit rapport qualité prix</commentaire>
+</avis>
+<avis>
+<auteur>Olivier</auteur>
+<note>4</note>
+<point_positif>Bonne resistance des courleurs, design sympa</point_positif>
+<point_negatif>pas assez de modèles pour garcon dans la gamme</point_negatif>
+<date>02/12/2012</date>
+<commentaire>style sympa, robuste et de bon maintien</commentaire>
+</avis>
+<avis>
+<auteur>Eugénie</auteur>
+<note>4</note>
+<point_positif>Coupe confortable, tissu de bonne qualité</point_positif>
+<point_negatif>Peu de choix de couleur</point_negatif>
+<date>26/11/2011</date>
+<commentaire>La gamme est de bonne qualité dans l'ensemble, je regrette simplement que celle pour les garçons soit très limitée.</commentaire>
+</avis>
+</liste_avis>
