@@ -29,7 +29,7 @@ def remove_accents(text):
 
 def merge_tokens(token):
     token_ = remove_accents(token.lower())
-    if token_ in ["jlm", "melenchon", "jean-luc"]:
+    if token_ in ["jlm", "melenchon", "jean-luc", "jlmelenchon"]:
         return "melenchon"
     if token_ in ["emmanuel", "macron"]:
         return "macron"
@@ -37,6 +37,8 @@ def merge_tokens(token):
         return "marine"
     if token_ in ["fillon", "françois", "francois"]:
         return "fillon"
+    if token_ in ["benoit", "benoithamon", "hamon", "benoît"]:
+        return "hamon"
     return token
 
 def format_punctuation(s):
@@ -44,7 +46,7 @@ def format_punctuation(s):
     formatted_s = re.sub(r"(?<!\?|\.)[\!]+(?!\?|\.)", " mult_excl ", formatted_s)
     formatted_s = re.sub(r"(?<!\!|\?|\.)[\?](?!\!|\?|\.)", " single_int ", formatted_s)
     formatted_s = re.sub(r"(?<!\!|\.)[\?]+(?!\!|\.)", " mult_int ", formatted_s)
-    formatted_s = re.sub(r"(?<!\w)[\.\.]+(?!\w)|…", " susp_pts ", formatted_s)
+    formatted_s = re.sub(r"(?<!\w)[\.\.]+(?!\w)", " susp_pts ", formatted_s)
     formatted_s = re.sub(r"(?<!\w)[\.|\?|\!]+(?!\w)", " mixed_m ", formatted_s)
     return formatted_s
 
@@ -81,9 +83,6 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
     if not b_lowercase:
         print("Keeping uppercase")
         lower = False
-    #if b_punctuation:
-    #    print("Keeping punctuation")
-    #    token_pattern_ = "(?u)\b\w\w+\b|!|\?"
     if not b_accent:
         print("Removing accents")
 
