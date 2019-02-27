@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Paul</auteur>
+<note>5</note>
+<point_positif>pas cher</point_positif>
+<point_negatif>aucuns</point_negatif>
+<date>29/12/2012</date>
+<commentaire>pour le prix ; ça ne vaut pas le coup de s'en priver</commentaire>
+</avis>
+<avis>
+<auteur>Antoine</auteur>
+<note>4</note>
+<point_positif>qualité, couleur</point_positif>
+<point_negatif>40 mètres pas proposé. Mais bon...</point_negatif>
+<date>23/09/2011</date>
+<commentaire>Bien, pas d' offre 40 mètres, mais on y va pas tous les jours non plus...</commentaire>
+</avis>
+<avis>
+<auteur>PHILIPPE</auteur>
+<note>4</note>
+<point_positif>SUFFISAMMENT LONGUE</point_positif>
+<point_negatif>AUCUN</point_negatif>
+<date>02/12/2010</date>
+<commentaire>PREVOIR UNE PALANGROTE POUR LA RACCOURCIR</commentaire>
+</avis>
+</liste_avis>

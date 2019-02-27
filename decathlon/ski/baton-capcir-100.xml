@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>alexandre</auteur>
+<note>2</note>
+<point_positif>poids</point_positif>
+<point_negatif>gros problèmes de pointes qui se detachent</point_negatif>
+<date>29/06/2012</date>
+<commentaire>après deux échanges les pointes ne tiennent toujours pas<br/>nous n'avons pas voulu le dernier échange nous avons eux un avoir</commentaire>
+</avis>
+<avis>
+<auteur>laurence</auteur>
+<note>4</note>
+<point_positif>legerete, dragonne facile d'utilisation</point_positif>
+<point_negatif>le prix</point_negatif>
+<date>03/02/2011</date>
+<commentaire>pas d'autre commentaire</commentaire>
+</avis>
+<avis>
+<auteur>CHRISTIAN</auteur>
+<note>5</note>
+<point_positif>EFFICACITE</point_positif>
+<point_negatif>AUCUN POINT NEGATIF</point_negatif>
+<date>12/12/2009</date>
+<commentaire>Produit très efficace : maniabilité et souplesse en toute circonstance.</commentaire>
+</avis>
+<avis>
+<auteur>José</auteur>
+<note>4</note>
+<point_positif>Légéreté,maniabilité,bonne accroche dans la neige</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>12/12/2009</date>
+<commentaire>L'idéal pour le ski de fond classique</commentaire>
+</avis>
+</liste_avis>

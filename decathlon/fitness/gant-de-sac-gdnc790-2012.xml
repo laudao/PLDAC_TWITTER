@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>franck</auteur>
+<note>3</note>
+<point_positif>leger</point_positif>
+<point_negatif>manque d'ergonomie</point_negatif>
+<date>06/12/2012</date>
+<commentaire>travailler l'ergonomie</commentaire>
+</avis>
+<avis>
+<auteur>Frédérick</auteur>
+<note>4</note>
+<point_positif>Bon produit</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>06/12/2012</date>
+<commentaire>Achat valable</commentaire>
+</avis>
+<avis>
+<auteur>Pierre</auteur>
+<note>4</note>
+<point_positif>pouce libre</point_positif>
+<point_negatif>mériterait un peu plus de serrage</point_negatif>
+<date>30/11/2012</date>
+<commentaire>J'utilise ces gants plusieurs fois par semaine pour m’entraîner sur mon sac de frappe. Je trouve qu'ils sont bien conçus, et donc tout à fait en accord avec ce type d'activité, mais uniquement pour la frappe sur sac.</commentaire>
+</avis>
+<avis>
+<auteur>sylvie</auteur>
+<note>4</note>
+<point_positif>legerete</point_positif>
+<point_negatif>pas assez long l'attache scratch</point_negatif>
+<date>03/10/2012</date>
+<commentaire>rien à redire à part l'attache scratch car quand les poignets sont fins, il est difficile de serrer pour que le poignet soit bien tenu!</commentaire>
+</avis>
+</liste_avis>

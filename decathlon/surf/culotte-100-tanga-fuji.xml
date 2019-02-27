@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>veronique</auteur>
+<note>4</note>
+<point_positif>tient bien a la nage</point_positif>
+<point_negatif>rien de particulier</point_negatif>
+<date>17/07/2012</date>
+<commentaire>bon maillot de bain</commentaire>
+</avis>
+<avis>
+<auteur>Chantal</auteur>
+<note>4</note>
+<point_positif>les couleurs</point_positif>
+<point_negatif>se déforme en piscine</point_negatif>
+<date>06/07/2012</date>
+<commentaire>Bon rapport qualité prix mais pas en piscine</commentaire>
+</avis>
+<avis>
+<auteur>joel</auteur>
+<note>4</note>
+<point_positif>bien taillé</point_positif>
+<point_negatif>zero</point_negatif>
+<date>06/07/2012</date>
+<commentaire>bon produit</commentaire>
+</avis>
+</liste_avis>

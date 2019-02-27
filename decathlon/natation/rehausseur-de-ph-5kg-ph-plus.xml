@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>anne</auteur>
+<note>3</note>
+<point_positif>aucun</point_positif>
+<point_negatif>produit pris en masse</point_negatif>
+<date>08/10/2012</date>
+<commentaire>en stock surement depuis longtemps, à casser à la masse.</commentaire>
+</avis>
+<avis>
+<auteur>Hervé</auteur>
+<note>5</note>
+<point_positif>Bon traitement</point_positif>
+<point_negatif>La poudre était amalgamée</point_negatif>
+<date>16/09/2012</date>
+<commentaire>Un probable problème de stockage, la poudre était amalgamée en gros bloc compact.</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>Hatem</auteur>
+<note>5</note>
+<point_positif>inepuisable, compacte</point_positif>
+<point_negatif>pas de points négatifs</point_negatif>
+<date>04/09/2012</date>
+<commentaire>excellent produit</commentaire>
+</avis>
+<avis>
+<auteur>Ronan</auteur>
+<note>3</note>
+<point_positif>uniquement pour droitier</point_positif>
+<point_negatif>difficile à utiliser pour gaucher</point_negatif>
+<date>17/03/2012</date>
+<commentaire>Il serait interressant de faire ce type de produit pour les gauchers .   <br/></commentaire>
+</avis>
+</liste_avis>

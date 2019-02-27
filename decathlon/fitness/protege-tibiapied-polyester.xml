@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>thierry</auteur>
+<note>4</note>
+<point_positif>prix</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>29/12/2012</date>
+<commentaire>manque de stock (taille)</commentaire>
+</avis>
+<avis>
+<auteur>loulou</auteur>
+<note>3</note>
+<point_positif>prix</point_positif>
+<point_negatif>praticité</point_negatif>
+<date>05/12/2012</date>
+<commentaire>difficile  à enfiller, pieds serrés.</commentaire>
+</avis>
+</liste_avis>

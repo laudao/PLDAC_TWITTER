@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>franck</auteur>
+<note>4</note>
+<point_positif>Tolérant pour un débutant (index39), puissant</point_positif>
+<point_negatif>Nil</point_negatif>
+<date>23/08/2012</date>
+<commentaire>Série agréable</commentaire>
+</avis>
+<avis>
+<auteur>David</auteur>
+<note>4</note>
+<point_positif>Puissance, rapport qualité/prix</point_positif>
+<point_negatif>Précision</point_negatif>
+<date>20/05/2012</date>
+<commentaire>Prise en main rapide, gain en distance immédiat. En revanche baisse de la précision.</commentaire>
+</avis>
+</liste_avis>

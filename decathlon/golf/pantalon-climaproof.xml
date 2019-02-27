@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Jean-Pierre</auteur>
+<note>4</note>
+<point_positif>confortable et léger</point_positif>
+<point_negatif>il faudrait des couleurs joyeuses</point_negatif>
+<date>05/12/2012</date>
+<commentaire><br/><br/> Un  trės bon rapport qualité prix.  Bonne matière. Travailler le desing et le choix des couleurs.<br/></commentaire>
+</avis>
+<avis>
+<auteur>jean pierre</auteur>
+<note>4</note>
+<point_positif>confortable et efficace</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>01/12/2012</date>
+<commentaire>neant</commentaire>
+</avis>
+<avis>
+<auteur>samuel</auteur>
+<note>4</note>
+<point_positif>leger etanche</point_positif>
+<point_negatif>rien</point_negatif>
+<date>04/09/2012</date>
+<commentaire>tres bien</commentaire>
+</avis>
+</liste_avis>

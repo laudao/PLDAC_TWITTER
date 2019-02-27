@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Antoine</auteur>
+<note>3</note>
+<point_positif>Ce met bien en boule</point_positif>
+<point_negatif>Le prix un peu cher</point_negatif>
+<date>11/04/2012</date>
+<commentaire>Bonne appat</commentaire>
+</avis>
+<avis>
+<auteur>Alban</auteur>
+<note>4</note>
+<point_positif>dejà pret à l'emploie</point_positif>
+<point_negatif>le prix</point_negatif>
+<date>30/10/2010</date>
+<commentaire>déja pret a l'emploie, elle se lance bien a la fronde.<br/>Je l'utilise pour les sessions rapide ( coup du soir..)<br/>Les mains reste prope.<br/></commentaire>
+</avis>
+<avis>
+<auteur>Delphine</auteur>
+<note>4</note>
+<point_positif>GRANULOMETRIE / DISPERSION DANS L'EAU</point_positif>
+<point_negatif>PEU DE GOUT ENCORE EXISTANT</point_negatif>
+<date>28/10/2010</date>
+<commentaire>A ESSAYER</commentaire>
+</avis>
+<avis>
+<auteur>david</auteur>
+<note>4</note>
+<point_positif>tout</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>28/10/2010</date>
+<commentaire>tres bonne amorce <br/>facile a mettre en boules</commentaire>
+</avis>
+</liste_avis>

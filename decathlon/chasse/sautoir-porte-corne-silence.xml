@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>jérôme</auteur>
+<note>5</note>
+<point_positif>bon produit qualité / prix</point_positif>
+<point_negatif>R.A.S</point_negatif>
+<date>05/02/2011</date>
+<commentaire>R.A.S</commentaire>
+</avis>
+<avis>
+<auteur>Cedrik</auteur>
+<note>4</note>
+<point_positif>longueur ideale est belle qualite</point_positif>
+<point_negatif>systeme d'attache moyen</point_negatif>
+<date>02/12/2010</date>
+<commentaire>je recommande vivement ce produit</commentaire>
+</avis>
+<avis>
+<auteur>Jean Pierre</auteur>
+<note>5</note>
+<point_positif>Longueur idéale, facile à mettre en place</point_positif>
+<point_negatif>Néant</point_negatif>
+<date>28/10/2010</date>
+<commentaire>J'ai acheté  ce produit le 23/09/2010, j'e n' ai utilisé que 4 fois ma corne avec le sautoir, je n'ai pas assez de recule pour voir la solidité.<br/>Je trouve ce produit trés bien , apparament de bonne qualité , qui devrait duré dans le temps.</commentaire>
+</avis>
+<avis>
+<auteur>nathalie</auteur>
+<note>4</note>
+<point_positif>cet solide</point_positif>
+<point_negatif>rien</point_negatif>
+<date>28/10/2010</date>
+<commentaire>tree bien</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Damien</auteur>
+<note>4</note>
+<point_positif>taille</point_positif>
+<point_negatif>Flotteur un peu faible</point_negatif>
+<date>22/11/2011</date>
+<commentaire>Amelliorer le flotteur pour une meilleur flotabilitée</commentaire>
+</avis>
+<avis>
+<auteur>Julien</auteur>
+<note>4</note>
+<point_positif>Facilité d'installation</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>29/08/2011</date>
+<commentaire>Efficace et bon rapport qualité prix.</commentaire>
+</avis>
+<avis>
+<auteur>Vanessa</auteur>
+<note>3</note>
+<point_positif>son prix, sa résistance</point_positif>
+<point_negatif>Traction non répartie sur les 2 brins du V</point_negatif>
+<date>02/09/2010</date>
+<commentaire>Lorsque le skieur sort du sillon, la traction n'est plus répartie sur les deux points d'attache. J'aurai du prendre un système avec une poulie. J'ai du défaire le nœud qui empêche le mousqueton de coulisser mais maintenant les frottements ont tendance à user la corde.</commentaire>
+</avis>
+<avis>
+<auteur>gérard</auteur>
+<note>3</note>
+<point_positif>la couleur</point_positif>
+<point_negatif>ficelle synthétique de mauvaise qualité</point_negatif>
+<date>02/09/2010</date>
+<commentaire>la ficelle se découple trop facilement ce qui rend le cordage trop fragile</commentaire>
+</avis>
+</liste_avis>

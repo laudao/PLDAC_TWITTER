@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>René</auteur>
+<note>5</note>
+<point_positif>Confortable, et trés efficace</point_positif>
+<point_negatif>Pour le moment ça va ,voir dans le temps</point_negatif>
+<date>05/12/2012</date>
+<commentaire>produit à decouvrir</commentaire>
+</avis>
+<avis>
+<auteur>Jean-Noël</auteur>
+<note>4</note>
+<point_positif>facilement clipsable et déclipsable</point_positif>
+<point_negatif>manque protection PVC en dessous clipses</point_negatif>
+<date>01/12/2012</date>
+<commentaire>produit un peu onéreux. Fait un peu de bruit (métal contre métal) lors de la marche.. ce qui est désagréable à la longue.</commentaire>
+</avis>
+</liste_avis>

@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>olivier</auteur>
+<note>5</note>
+<point_positif>facile à monter, bonne adhérence, solide à terme</point_positif>
+<point_negatif>nécessairement moins confortable</point_negatif>
+<date>17/01/2011</date>
+<commentaire>un bon produit, vintage est bien plus solide que les autres guidolines 1er prix. Montée avec facilité sur un vélo ancien de cyclotourisme.</commentaire>
+</avis>
+<avis>
+<auteur>franck</auteur>
+<note>4</note>
+<point_positif>bonne adhésion</point_positif>
+<point_negatif>rugosité au toucher</point_negatif>
+<date>02/12/2010</date>
+<commentaire>très bon rapport qualité prix</commentaire>
+</avis>
+<avis>
+<auteur>marie-christine</auteur>
+<note>3</note>
+<point_positif>agréable au toucher</point_positif>
+<point_negatif>se décolle assez facilement</point_negatif>
+<date>02/12/2010</date>
+<commentaire>il se décolle au bout de 15 jours d'utilisation</commentaire>
+</avis>
+</liste_avis>

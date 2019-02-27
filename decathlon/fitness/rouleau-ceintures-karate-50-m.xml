@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>aubertin</auteur>
+<note>5</note>
+<point_positif>belle couleur</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>29/08/2011</date>
+<commentaire>Excellent produit, j'achète toujours mes rouleaux chez vous.</commentaire>
+</avis>
+<avis>
+<auteur>claude</auteur>
+<note>5</note>
+<point_positif>facile a découpé pour faire des ceinture pour les</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>27/08/2011</date>
+<commentaire>pas assez de rouleaux bi couleurs notament bleu marron</commentaire>
+</avis>
+<avis>
+<auteur>Sébastien</auteur>
+<note>5</note>
+<point_positif>Correspond parfaitement a nos attentes</point_positif>
+<point_negatif>RAS</point_negatif>
+<date>02/09/2010</date>
+<commentaire>Produit de bonne qualité, et parfaitement réglementaire, pas de surprise, pleinement satisfait, comme toujours chez décathlon</commentaire>
+</avis>
+<avis>
+<auteur>Christiane</auteur>
+<note>4</note>
+<point_positif>Le cout du rouleau</point_positif>
+<point_negatif>au bout d'un moment les ceintures s'éffilochent</point_negatif>
+<date>17/07/2010</date>
+<commentaire>Beaucoup moins chers que les ceintures individuelles</commentaire>
+</avis>
+</liste_avis>

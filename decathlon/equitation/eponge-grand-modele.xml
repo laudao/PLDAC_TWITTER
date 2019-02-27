@@ -1,0 +1,34 @@
+<liste_avis>
+<avis>
+<auteur>Anna</auteur>
+<note>5</note>
+<point_positif>Très pratique et délicate</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>29/10/2010</date>
+<commentaire>Les chevaux sont très heureux</commentaire>
+</avis>
+<avis>
+<auteur>adrien</auteur>
+<note>4</note>
+<point_positif>prise en main</point_positif>
+<point_negatif>rien</point_negatif>
+<date>28/10/2010</date>
+<commentaire>cette éponge correspond a mes besoins</commentaire>
+</avis>
+<avis>
+<auteur>Elé</auteur>
+<note>5</note>
+<point_positif>Esthétisme,Choix des couleurs,Efficacité</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>25/10/2010</date>
+<commentaire>J'ai choisi le rose et elle est très belle !</commentaire>
+</avis>
+<avis>
+<auteur>Evelyne</auteur>
+<note>5</note>
+<point_positif>Grande</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>09/10/2010</date>
+<commentaire>Grande éponge pratique pour laver un cheval</commentaire>
+</avis>
+</liste_avis>

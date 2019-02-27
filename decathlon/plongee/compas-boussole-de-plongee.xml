@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>philippe</auteur>
+<note>4</note>
+<point_positif>compact lisible</point_positif>
+<point_negatif>rien en fait</point_negatif>
+<date>01/12/2012</date>
+<commentaire>super produit je recommande</commentaire>
+</avis>
+<avis>
+<auteur>bernard</auteur>
+<note>3</note>
+<point_positif>fiable et résistant</point_positif>
+<point_negatif>lecture un peu compliquée</point_negatif>
+<date>30/11/2012</date>
+<commentaire>rapport qualité-prix correct</commentaire>
+</avis>
+<avis>
+<auteur>edgard</auteur>
+<note>5</note>
+<point_positif>pas de probleme pour lire le compas meme dans l'ea</point_positif>
+<point_negatif>longueur du bracelet court pour le mettre au poign</point_negatif>
+<date>11/10/2012</date>
+<commentaire>bon produit avec une lecture tres bonne</commentaire>
+</avis>
+</liste_avis>

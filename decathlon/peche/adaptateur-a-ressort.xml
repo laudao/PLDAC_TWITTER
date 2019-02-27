@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>johnny</auteur>
+<note>1</note>
+<point_positif>le systeme</point_positif>
+<point_negatif>tres fragile</point_negatif>
+<date>09/09/2012</date>
+<commentaire>bonjour j'ai achete ce produit le systeme est genial mais malheuresement trop fragile, au bout de peche les billes ont laché</commentaire>
+</avis>
+<avis>
+<auteur>gerard</auteur>
+<note>2</note>
+<point_positif>aucn</point_positif>
+<point_negatif>trop fragile en aluminium</point_negatif>
+<date>16/09/2011</date>
+<commentaire>je trouvais le principe formidable sur le côté pratique,mais qu'elle ne fut pas ma surprise au bout de deux utilisation, les ergots étaient déja usés.</commentaire>
+</avis>
+</liste_avis>

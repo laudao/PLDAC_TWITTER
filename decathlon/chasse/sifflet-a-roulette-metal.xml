@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>didier</auteur>
+<note>4</note>
+<point_positif>bon produit</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>30/09/2010</date>
+<commentaire>je recommande ce produit</commentaire>
+</avis>
+<avis>
+<auteur>christophe</auteur>
+<note>5</note>
+<point_positif>bien</point_positif>
+<point_negatif>pas</point_negatif>
+<date>30/09/2010</date>
+<commentaire>bon produit</commentaire>
+</avis>
+<avis>
+<auteur>Eric</auteur>
+<note>4</note>
+<point_positif>Corps métal, cordelette de suspension solide</point_positif>
+<point_negatif>neant</point_negatif>
+<date>15/07/2010</date>
+<commentaire>Aucun</commentaire>
+</avis>
+</liste_avis>

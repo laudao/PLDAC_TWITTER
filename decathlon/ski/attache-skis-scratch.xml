@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>Cécile</auteur>
+<note>4</note>
+<point_positif>RAS</point_positif>
+<point_negatif>ras</point_negatif>
+<date>03/02/2011</date>
+<commentaire>produit assez simple qui remplit entièrement son rôle</commentaire>
+</avis>
+<avis>
+<auteur>Sébastien</auteur>
+<note>4</note>
+<point_positif>Prix</point_positif>
+<point_negatif>Pas assez elastiques à mon goût</point_negatif>
+<date>02/12/2010</date>
+<commentaire>Assez pratique, je trouverais plus pratique si ils étaient un peu plus élastiques...</commentaire>
+</avis>
+</liste_avis>

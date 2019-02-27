@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>ferreira</auteur>
+<note>5</note>
+<point_positif>Chaud</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>02/12/2012</date>
+<commentaire>Très satisfait du produit</commentaire>
+</avis>
+<avis>
+<auteur>claudine</auteur>
+<note>5</note>
+<point_positif>tres bonne qualite</point_positif>
+<point_negatif>rien</point_negatif>
+<date>10/10/2012</date>
+<commentaire>a recommender aux amis</commentaire>
+</avis>
+</liste_avis>

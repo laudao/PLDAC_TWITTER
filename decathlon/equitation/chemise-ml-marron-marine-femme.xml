@@ -1,0 +1,58 @@
+<liste_avis>
+<avis>
+<auteur>Fabienne</auteur>
+<note>5</note>
+<point_positif>belle tenue</point_positif>
+<point_negatif>rien</point_negatif>
+<date>10/10/2012</date>
+<commentaire>bon produit qui rend bien.</commentaire>
+</avis>
+<avis>
+<auteur>claudine</auteur>
+<note>4</note>
+<point_positif>finitions coutures propres</point_positif>
+<point_negatif>manches trés longues</point_negatif>
+<date>09/10/2012</date>
+<commentaire>produit chic et cool à la fois chemisier qui peut se porter en toutes occasion.</commentaire>
+</avis>
+<avis>
+<auteur>Nathalie</auteur>
+<note>4</note>
+<point_positif>Bonne coupe</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>06/10/2012</date>
+<commentaire>Chemise conforme à mon utilisation  pour équitation western</commentaire>
+</avis>
+<avis>
+<auteur>marie-anne</auteur>
+<note>5</note>
+<point_positif>agréable à porter, se repasse facilement</point_positif>
+<point_negatif>taille petit</point_negatif>
+<date>03/10/2012</date>
+<commentaire>un choix pour l'équitation mais une chemise polyvalente !</commentaire>
+</avis>
+<avis>
+<auteur>fabrice</auteur>
+<note>4</note>
+<point_positif>qualité, agréable à porter</point_positif>
+<point_negatif>longue manche</point_negatif>
+<date>08/09/2012</date>
+<commentaire>contente de cette achat, chemise de bonne qualité et beau coloris, bas prix</commentaire>
+</avis>
+<avis>
+<auteur>thérèse</auteur>
+<note>5</note>
+<point_positif>la coupe, la couleur</point_positif>
+<point_negatif>l'encolure</point_negatif>
+<date>07/07/2012</date>
+<commentaire>un produit intéressant!</commentaire>
+</avis>
+<avis>
+<auteur>evelyne</auteur>
+<note>5</note>
+<point_positif>confortable; bonne coupe</point_positif>
+<point_negatif>aucuns</point_negatif>
+<date>07/07/2012</date>
+<commentaire>bon produit</commentaire>
+</avis>
+</liste_avis>

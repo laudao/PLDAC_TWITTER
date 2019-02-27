@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>Pascal</auteur>
+<note>5</note>
+<point_positif>durable, tient bien en main, confortable</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>11/03/2011</date>
+<commentaire>Un des meilleurs grip sur le marché</commentaire>
+</avis>
+<avis>
+<auteur>PIERRE</auteur>
+<note>4</note>
+<point_positif>confort, absorbe la sueur</point_positif>
+<point_negatif>usure rapide</point_negatif>
+<date>03/02/2011</date>
+<commentaire>Bon produit de milieu de gamme, confort correct, mais usure trop rapide et marque vite!</commentaire>
+</avis>
+<avis>
+<auteur>Stéphane</auteur>
+<note>4</note>
+<point_positif>Bon grip et bon amortissement</point_positif>
+<point_negatif>Sensation des bords du grip</point_negatif>
+<date>02/12/2010</date>
+<commentaire>Le grip est bon et l'amortissement des chocs est efficace.<br/>Par contre les bords non collants de la bande ont tendance à raccrocher un peu au passage de la main.<br/>L’autocollant Babolat censé faire office de finition est un gadget : il colle mal.</commentaire>
+</avis>
+<avis>
+<auteur>Jérôme</auteur>
+<note>5</note>
+<point_positif>Confort, adhérence</point_positif>
+<point_negatif>Rien</point_negatif>
+<date>28/10/2010</date>
+<commentaire>Très bon produit</commentaire>
+</avis>
+<avis>
+<auteur>Laurent</auteur>
+<note>5</note>
+<point_positif>touché collant, réduit les vibrations</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>14/09/2010</date>
+<commentaire>Sensation de touché super agréable.<br/>Son épaisseur lui fait absorber les vibrations.<br/>Je le conseil.</commentaire>
+</avis>
+</liste_avis>

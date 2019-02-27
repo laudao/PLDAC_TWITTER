@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>patrick</auteur>
+<note>5</note>
+<point_positif>les couleur excelente</point_positif>
+<point_negatif>un peux cher</point_negatif>
+<date>08/10/2012</date>
+<commentaire>tres bon produit domage un peux cher</commentaire>
+</avis>
+<avis>
+<auteur>Hugo</auteur>
+<note>1</note>
+<point_positif>0</point_positif>
+<point_negatif>peinture et  plastique de mauvaise qualité</point_negatif>
+<date>26/09/2011</date>
+<commentaire>produit a déconseiller</commentaire>
+</avis>
+</liste_avis>

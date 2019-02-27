@@ -1,0 +1,42 @@
+<liste_avis>
+<avis>
+<auteur>Gaëtan</auteur>
+<note>4</note>
+<point_positif>correspond à mes besoins</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>28/11/2012</date>
+<commentaire>belle facture</commentaire>
+</avis>
+<avis>
+<auteur>Louis</auteur>
+<note>4</note>
+<point_positif>bonne qualité</point_positif>
+<point_negatif>aucun</point_negatif>
+<date>30/06/2012</date>
+<commentaire>prix relativement cher</commentaire>
+</avis>
+<avis>
+<auteur>dorian</auteur>
+<note>3</note>
+<point_positif>qualité du cuir</point_positif>
+<point_negatif>glisse sur l'arme...</point_negatif>
+<date>24/11/2011</date>
+<commentaire>je pense revenir aux grenadières</commentaire>
+</avis>
+<avis>
+<auteur>vincent</auteur>
+<note>2</note>
+<point_positif>qualité du cuir</point_positif>
+<point_negatif>trop court. pas facile a passé autour de la cross</point_negatif>
+<date>24/11/2011</date>
+<commentaire>rallongée une boucle</commentaire>
+</avis>
+<avis>
+<auteur>stéphane</auteur>
+<note>5</note>
+<point_positif>pas de point négatif !</point_positif>
+<point_negatif>neant</point_negatif>
+<date>27/09/2011</date>
+<commentaire>produit spécifique de bonne qualité</commentaire>
+</avis>
+</liste_avis>

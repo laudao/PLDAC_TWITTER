@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>sandrine</auteur>
+<note>4</note>
+<point_positif>idéal par temps froid</point_positif>
+<point_negatif>taille unique et donc selectif</point_negatif>
+<date>11/01/2013</date>
+<commentaire>J'ai réussi à mettre un dispositif de serrage sur cette casquette car elle ne tenait pas sur ma tête. Je suis surprise que vous n'y ayez pas pensé.</commentaire>
+</avis>
+<avis>
+<auteur>Claudine</auteur>
+<note>4</note>
+<point_positif>chaud et confortable</point_positif>
+<point_negatif>cheveux mouillés</point_negatif>
+<date>10/12/2012</date>
+<commentaire>Trés agréable à porter et confortable</commentaire>
+</avis>
+<avis>
+<auteur>claude</auteur>
+<note>4</note>
+<point_positif>prévient soleil et pluie</point_positif>
+<point_negatif>oreillettes un peu lâches, pas de serrage possible</point_negatif>
+<date>03/12/2012</date>
+<commentaire>Un dispositif de serrage à l'arri!ère pour pouvoir l'ajuster serait idéal</commentaire>
+</avis>
+</liste_avis>

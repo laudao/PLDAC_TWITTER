@@ -1,0 +1,18 @@
+<liste_avis>
+<avis>
+<auteur>David</auteur>
+<note>5</note>
+<point_positif>tres positif</point_positif>
+<point_negatif>attention aux doigts</point_negatif>
+<date>02/05/2011</date>
+<commentaire>je recommande</commentaire>
+</avis>
+<avis>
+<auteur>xavier</auteur>
+<note>4</note>
+<point_positif>ne fais pas fondre le plastique</point_positif>
+<point_negatif>rien</point_negatif>
+<date>04/02/2011</date>
+<commentaire>idéal pour solidifier des noeuds de raccord de vos bas de ligne. je m'en suis aussi servi pour coller un scion qui avait été cassé....</commentaire>
+</avis>
+</liste_avis>

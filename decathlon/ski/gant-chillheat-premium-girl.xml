@@ -1,0 +1,26 @@
+<liste_avis>
+<avis>
+<auteur>Amelie</auteur>
+<note>5</note>
+<point_positif>Chauds et beaux</point_positif>
+<point_negatif>Aucun point</point_negatif>
+<date>08/12/2012</date>
+<commentaire>Des gants efficaces</commentaire>
+</avis>
+<avis>
+<auteur>Carole</auteur>
+<note>5</note>
+<point_positif>Confortables et beaux</point_positif>
+<point_negatif>Aucun</point_negatif>
+<date>07/12/2012</date>
+<commentaire>Très bon rapport qualité prix esthétique</commentaire>
+</avis>
+<avis>
+<auteur>marie</auteur>
+<note>5</note>
+<point_positif>le confort et l allure</point_positif>
+<point_negatif>rien</point_negatif>
+<date>03/12/2012</date>
+<commentaire>bon produit qualité prix</commentaire>
+</avis>
+</liste_avis>
