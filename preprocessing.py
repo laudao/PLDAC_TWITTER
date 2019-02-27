@@ -12,6 +12,11 @@ punctuation_dict = {'!': 'single_exl', '!!': 'mult_exl', '?': 'single_int',\
                     '??': 'mult_int', '...': 'susp_pts', '…': 'susp_pts',\
                     '?!.': 'mixed_m'}
 
+def french_stopwords():
+    fr_stopwords = nltk.corpus.stopwords.words('french')
+    fr_stopwords.extend(['de', 'ou', 'sur', 'or', 'ni', 'car', 'quand', 'a', 'mais', 'donc', 'si', 'quel', 'entre', 'tout', 'ce', 'cet', 'ça', 'tous', "c'est", 'faire', 'dans', 'fait'])
+    return fr_stopwords
+
 def remove_punctuation(doc):
     return ''.join([char for char in doc if char not in string.punctuation])
 
@@ -31,7 +36,7 @@ def merge_tokens(token):
     token_ = remove_accents(token.lower())
     if token_ in ["jlm", "melenchon", "jean-luc", "jlmelenchon"]:
         return "melenchon"
-    if token_ in ["emmanuel", "macron"]:
+    if token_ in ["emmanuel", "macron", "emmanuelmacron"]:
         return "macron"
     if token_ in ["marine", "marinelepen", "lepen"]:
         return "marine"
@@ -50,7 +55,7 @@ def format_punctuation(s):
     formatted_s = re.sub(r"(?<!\w)[\.|\?|\!]+(?!\w)", " mixed_m ", formatted_s)
     return formatted_s
 
-def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
+def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b_accent=True, max_f=None):
     '''
         docs : list of documents
         stopwords : list of stopwords (None if stopwords are to be kept)
@@ -65,7 +70,6 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
     '''
     tokenizer_ = None
     lower = True
-    #token_pattern_ = "(?u)\b\w\w+\b"
 
     if b_stemming:
         print("Stemming")
@@ -96,9 +100,9 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True,b_
         s = s.split(" ")
         clean_s = []
         for token in s:
-            token = merge_tokens(token)
             token=token.replace('#','')
             token=token.replace('@', '')
+            token = merge_tokens(token)
             if "'" in token:
                 token = token.split("'",1)[1]
             if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2):
