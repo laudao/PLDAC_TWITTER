@@ -100,6 +100,8 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b
         s = s.split(" ")
         clean_s = []
         for token in s:
+            if lower:
+                token = token.lower()
             token=token.replace('#','')
             token=token.replace('@', '')
             token = merge_tokens(token)
@@ -110,7 +112,8 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b
         clean_s = ' '.join(clean_s)
         return clean_s
 
-    vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, lowercase=lower, max_features=max_f)
+    #vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, lowercase=lower, max_features=max_f)
+    vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_f)
     X = vectorizer.fit_transform(docs)
 
     sum_words = X.sum(axis=0)
