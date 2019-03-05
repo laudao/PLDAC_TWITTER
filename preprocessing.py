@@ -40,7 +40,7 @@ def merge_tokens(token):
         return "macron"
     if token_ in ["marine", "marinelepen", "lepen"]:
         return "marine"
-    if token_ in ["fillon", "françois", "francois"]:
+    if token_ in ["fillon"]:
         return "fillon"
     if token_ in ["benoit", "benoithamon", "hamon", "benoît"]:
         return "hamon"
