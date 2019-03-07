@@ -21,7 +21,7 @@ def remove_punctuation(doc):
     return ''.join([char for char in doc if char not in string.punctuation])
 
 def remove_accents(text):
-    try:
+    t.decode("utf-8")ry:
         text = unicode(text, 'utf-8')
     except NameError: # unicode is a default on python 3
         pass
@@ -107,7 +107,7 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b
             token = merge_tokens(token)
             if "'" in token:
                 token = token.split("'",1)[1]
-            if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2):
+            if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2 or ):
                 clean_s.append(token)
         clean_s = ' '.join(clean_s)
         return clean_s
@@ -129,7 +129,7 @@ def vectorize_docs(vectorizer, docs):
         given a vectorizer, vectorize documents
     '''
     X = vectorizer.transform(docs)
-    return X.toarray()
+    return X
 
 def cos_sim(a,b):
     '''
