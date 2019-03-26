@@ -92,6 +92,16 @@ def clean_doc_no_lower(s):
     clean_s = ' '.join(clean_s)
     return clean_s
 
+def stem_words(doc):
+    '''
+        doc : document (string)
+        stem words in doc
+    '''
+    stemmer = SnowballStemmer('french')
+    tokenizer = CountVectorizer().build_tokenizer()
+    return (stemmer.stem(w) for w in tokenizer(doc))
+
+
 def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_f=None):
     '''
         docs : list of documents
@@ -113,12 +123,11 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, 
     if b_stemming:
         print("Stemming")
         stemmer = SnowballStemmer('french')
-        tokenizer = CountVectorizer().build_tokenizer()
 
-        def stemmed_words(doc):
-            return (stemmer.stem(w) for w in tokenizer(doc))
+        #def stemmed_words(doc):
+        #    return (stemmer.stem(w) for w in tokenizer(doc))
 
-        tokenizer_ = stemmed_words
+        tokenizer_ = stem_words
 
         if not (stopwords is None):
             stemmed_stopwords = [stemmer.stem(t) for t in stopwords]
