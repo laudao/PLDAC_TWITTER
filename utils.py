@@ -12,7 +12,7 @@ def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stem
         b_punctuation : boolean indicating whether to keep punctuation
         b_accent : boolean indicating whether to keep accents
         max_f : maximum number of top occurring tokens to select
-        build and return a vectorizer given the above parameter
+        build and return a vectorizer given the above parameters
             along with a list of tuples containing the words and
             their occurrences in the tweets
     '''

@@ -21,7 +21,7 @@ def remove_punctuation(doc):
     return ''.join([char for char in doc if char not in string.punctuation])
 
 def remove_accents(text):
-    t.decode("utf-8")ry:
+    try:
         text = unicode(text, 'utf-8')
     except NameError: # unicode is a default on python 3
         pass
@@ -55,21 +55,60 @@ def format_punctuation(s):
     formatted_s = re.sub(r"(?<!\w)[\.|\?|\!]+(?!\w)", " mixed_m ", formatted_s)
     return formatted_s
 
-def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b_accent=True, max_f=None):
+def clean_doc_lower(s):
+    '''
+        s : document as a string
+        preprocess s - lowercasing included
+    '''
+    s = s.split(" ")
+    clean_s = []
+    for token in s:
+        token = token.lower()
+        token=token.replace('#','')
+        token=token.replace('@', '')
+        token = merge_tokens(token)
+        if "'" in token:
+            token = token.split("'",1)[1]
+        if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2):
+            clean_s.append(token)
+    clean_s = ' '.join(clean_s)
+    return clean_s
+
+def clean_doc_no_lower(s):
+    '''
+        s : document as a string
+        preprocess s while keeping uppercase
+    '''
+    s = s.split(" ")
+    clean_s = []
+    for token in s:
+        token=token.replace('#','')
+        token=token.replace('@', '')
+        token = merge_tokens(token)
+        if "'" in token:
+            token = token.split("'",1)[1]
+        if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2):
+            clean_s.append(token)
+    clean_s = ' '.join(clean_s)
+    return clean_s
+
+def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_f=None):
     '''
         docs : list of documents
         stopwords : list of stopwords (None if stopwords are to be kept)
-        b_stemming : boolean indicating whether to stem words
-        b_lowercase : boolean indicating whether to lowercase words
-        b_punctuation : boolean indicating whether to keep punctuation
-        b_accent : boolean indicating whether to keep accents
+        b_stemming : boolean indicating whether to stem words (default:False)
+        b_lowercase : boolean indicating whether to lowercase words (default:False)
+        b_rmaccent : boolean indicating whether to remove accents (default:False)
         max_f : maximum number of top occurring tokens to select
-        build and return a vectorizer given the above parameter
-            along with a list of tuples containing the words and
-            their occurrences in the docs
+        build and return a vectorizer given the above parameters
+            along with the document-term matrix representation of the tweets
     '''
     tokenizer_ = None
     lower = True
+    preprocessor_ = clean_doc_no_lower
+
+    if not (stopwords is None):
+        print("Removing stopwords")
 
     if b_stemming:
         print("Stemming")
@@ -84,10 +123,10 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b
         if not (stopwords is None):
             stemmed_stopwords = [stemmer.stem(t) for t in stopwords]
             stopwords = stemmed_stopwords
-    if not b_lowercase:
-        print("Keeping uppercase")
-        lower = False
-    if not b_accent:
+    if b_lowercase:
+        print("Removing uppercases")
+        preprocessor_ = clean_doc_lower
+    if b_rmaccent:
         print("Removing accents")
 
         if not (stopwords is None):
@@ -96,31 +135,24 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=True, b
     if not (max_f is None):
         print("Keeping the top {} occurring tokens".format(max_f))
 
-    def clean_doc(s):
-        s = s.split(" ")
-        clean_s = []
-        for token in s:
-            if lower:
-                token = token.lower()
-            token=token.replace('#','')
-            token=token.replace('@', '')
-            token = merge_tokens(token)
-            if "'" in token:
-                token = token.split("'",1)[1]
-            if not ((len(token)<=4 and "'" in token) or "http" in token or len(token) <= 2 or ):
-                clean_s.append(token)
-        clean_s = ' '.join(clean_s)
-        return clean_s
-
-    #vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, lowercase=lower, max_features=max_f)
-    vectorizer = CountVectorizer(preprocessor=clean_doc, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_f)
+    vectorizer = CountVectorizer(preprocessor=preprocessor_, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_f)
     X = vectorizer.fit_transform(docs)
 
+    return vectorizer, X
+
+def get_words_freq(vectorizer, X):
+    '''
+        vectorizer : CountVectorizer
+        X : document-term matrix
+        return a list of tuples containing the words of the vocabulary
+            and their occurrences in the tweets,
+            sorted by occurrence
+    '''
     sum_words = X.sum(axis=0)
     words_freq = [(word, sum_words[0, idx]) for word, idx in vectorizer.vocabulary_.items()]
     words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
 
-    return vectorizer, words_freq
+    return words_freq
 
 def vectorize_docs(vectorizer, docs):
     '''
