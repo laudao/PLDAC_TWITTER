@@ -193,6 +193,27 @@ def vectorize_docs(vectorizer, docs):
     X = vectorizer.transform(docs.astype('U'))
     return X
 
+def save_vectorizer(vectorizer, fname):
+    '''
+        vectorizer : CountVectorizer
+        fname : file name
+        save vectorizer as vectorizers/fname
+    '''
+    f = open("vectorizers/" + fname, "wb")
+    pickle.dump(vectorizer,f)
+    f.close()
+
+def load_vectorizer(vectorizer, fname):
+    '''
+        vectorizer : CountVectorizer
+        fname : file name
+        load vectorizers/fname
+    '''
+    f = open("vectorizers/" + fname, "rb")
+    vectorizer = pickle.load(f)
+    f.close()
+    return vectorizer
+
 def cos_sim(a,b):
     '''
         a,b : vectors

@@ -12,7 +12,8 @@ def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stem
         b_punctuation : boolean indicating whether to keep punctuation
         b_accent : boolean indicating whether to keep accents
         max_f : maximum number of top occurring tokens to select
-        build and return a vectorizer given the above parameters
+        get the N first tweets in the database,
+            build and return a vectorizer given the above parameters
             along with a list of tuples containing the words and
             their occurrences in the tweets
     '''
@@ -23,4 +24,26 @@ def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stem
 
     [vectorizer, words_freq] = build_vectorizer(tweets, stopwords=stopwords, b_stemming=b_stemming, b_lowercase=b_lowercase, b_accent=b_accent, max_f=max_f)
     return vectorizer, words_freq
+
+def save_vectorizer(vectorizer, fname):
+    '''
+        vectorizer : CountVectorizer
+        fname : file name
+        save vectorizer as vectorizers/fname
+    '''
+    f = open("vectorizers/" + fname, "wb")
+    pickle.dump(vectorizer,f)
+    f.close()
+
+def load_vectorizer(vectorizer, fname):
+    '''
+        vectorizer : CountVectorizer
+        fname : file name
+        load vectorizers/fname
+    '''
+    f = open("vectorizers/" + fname, "rb")
+    vectorizer = pickle.load(f)
+    f.close()
+    return vectorizer
+
 
