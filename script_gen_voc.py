@@ -10,12 +10,32 @@ tweet_list_nopunct = get_tweets(N=1000, b_punctuation=False)
 
 fr_stopwords = french_stopwords()
 
-''' punctuation/no stopwords/stemming/no accent'''
-[vectorizer1, X1] = build_vectorizer(tweet_list, stopwords=fr_stopwords, b_stemming=True, b_rmaccent=True)
+''' punctuation - no preprocessing '''
+[v1, X1] = build_vectorizer(tweet_list)
 
-f1 = open("vocs/voc1", "wb")
-pickle.dump(vectorizer1, f1)
-f1.close()
+f_v1 = open("vectorizers/vect1", "wb")
+f_X1 = open("X/X1", "wb")
+pickle.dump(v1,f_v1)
+pickle.dump(X1,f_X1)
+f_v1.close()
+f_X1.close()
+
+''' no punctuation - no preprocessing '''
+[v2, X2] = build_vectorizer(tweet_list_nopunct)
+
+f_v2 = open("vectorizers/vect2", "wb")
+f_X2 = open("X/X2", "wb")
+pickle.dump(v2,f_v2)
+pickle.dump(X2,f_X2)
+f_v2.close()
+f_X2.close()
+
+#''' punctuation/no stopwords/stemming/no accent'''
+#[vectorizer1, X1] = build_vectorizer(tweet_list, stopwords=fr_stopwords, b_stemming=True, b_rmaccent=True)
+#
+#f1 = open("vocs/voc1", "wb")
+#pickle.dump(vectorizer1, f1)
+#f1.close()
 
 #''' no punctuation/no stopwords/stemming/no accent'''
 #[vectorizer2, words_freq2] = build_vectorizer(tweet_list_nopunct, stopwords=fr_stopwords, b_stemming=True, b_accent=False)
