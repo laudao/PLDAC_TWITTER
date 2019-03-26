@@ -1,4 +1,5 @@
 import mysql.connector
+import numpy as np
 
 def connect_to_db():
     twitter_db = mysql.connector.connect(
@@ -40,7 +41,7 @@ def get_tweets(N=None, b_retweet=False, b_punctuation=True):
         tweet_list.append(text[0])
 
     cursor.close()
-    return tweet_list
+    return np.array(tweet_list)
 
 def get_tweets_from_user(user_id, N=None, b_retweet=False):
     '''
@@ -69,6 +70,6 @@ def get_tweets_from_user(user_id, N=None, b_retweet=False):
         tweet_list.append(text[0])
 
     cursor.close()
-    return tweet_list
+    return np.array(tweet_list)
 
 

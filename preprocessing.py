@@ -101,8 +101,10 @@ def stem_words(doc):
     tokenizer = CountVectorizer().build_tokenizer()
     return (stemmer.stem(w) for w in tokenizer(doc))
 
+def remove_numbers(docs):
+    return np.array([re.sub('(?<!\w)[\d]+(?!\w)', '',doc) for doc in docs])
 
-def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_f=None):
+def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_features=None, b_rmnumbers=False, min_df=1, max_df=1.0):
     '''
         docs : list of documents
         stopwords : list of stopwords (None if stopwords are to be kept)
@@ -110,12 +112,31 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, 
         b_lowercase : boolean indicating whether to lowercase words (default:False)
         b_rmaccent : boolean indicating whether to remove accents (default:False)
         max_f : maximum number of top occurring tokens to select
+        min_df : float in [0,1] - when building the vocabulary, ignore terms
+            that have a document frequency strictly lower than this threshold
+        max_df : float in [0,1] - when building the vocabulary, ignore terms that
+            have a document frequency strictly higher than this threshold
         build and return a vectorizer given the above parameters
             along with the document-term matrix representation of the tweets
     '''
     tokenizer_ = None
     lower = True
     preprocessor_ = clean_doc_no_lower
+
+    if (not min_df is None) and ((min_df < 0) or (min_df > 1)):
+        min_df = 1 # absolute counts
+
+    if (not max_df is None) and ((max_df < 0) or (max_df > 1)):
+        max_df = 1.0 # proportion of documents
+
+    if isinstance(min_df, float):
+        print("Ignoring terms in the vocabulary that have a document frequency < {}".format(min_df))
+    if max_df < 1.0:
+        print("Ignoring terms in the vocabulary that have a document frequency > {}".format(max_df))
+
+    if b_rmnumbers:
+        print("Removing numbers")
+        docs = remove_numbers(docs)
 
     if not (stopwords is None):
         print("Removing stopwords")
@@ -141,11 +162,11 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, 
         if not (stopwords is None):
             stopwords = [remove_accents(w) for w in stopwords]
 
-    if not (max_f is None):
-        print("Keeping the top {} occurring tokens".format(max_f))
+    if not (max_features is None):
+        print("Keeping the top {} occurring tokens".format(max_features))
 
-    vectorizer = CountVectorizer(preprocessor=preprocessor_, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_f)
-    X = vectorizer.fit_transform(docs)
+    vectorizer = CountVectorizer(preprocessor=preprocessor_, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_features, min_df=min_df, max_df=max_df)
+    X = vectorizer.fit_transform(docs.astype('U'))
 
     return vectorizer, X
 
@@ -169,7 +190,7 @@ def vectorize_docs(vectorizer, docs):
         docs : documents to vectorize
         given a vectorizer, vectorize documents
     '''
-    X = vectorizer.transform(docs)
+    X = vectorizer.transform(docs.astype('U'))
     return X
 
 def cos_sim(a,b):
