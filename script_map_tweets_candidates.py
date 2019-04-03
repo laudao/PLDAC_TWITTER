@@ -37,7 +37,7 @@ for (text, tweet_id) in cursor.fetchall():
         bits[3] = 1
     if re.findall(r"(fillon|(?<=#)lr|\blr\b)",text,re.IGNORECASE):
         bits[4] = 1
-    if re.findall(r"(benoit|hamon|(?<=#)ps|(?<!htt)ps)",text,re.IGNORECASE):
+    if re.findall(r"(benoit|hamon|(?<=#)ps|(?<!\w)ps)",text,re.IGNORECASE):
         bits[5] = 1
     if re.findall(r"(lassalle)",text,re.IGNORECASE):
         bits[6] = 1
@@ -50,17 +50,16 @@ for (text, tweet_id) in cursor.fetchall():
     if re.findall(r"(poutou|philippe poutou)",text,re.IGNORECASE):
         bits[10] = 1
 
-    bits = ''.join(map(str, bits))
-    sql = """UPDATE tweets SET candidates = b'%s' WHERE tweet_id = %s"""
+    bits = ''.join([str(int(b)) for b in bits])
+    sql = """UPDATE tweets SET candidates = %s WHERE tweet_id = %s"""
     val = (bits, tweet_id)
-    print(tweet_id)
     cursor2.execute(sql, val)
     cursor2.close()
     twitter_db.commit()
+    print(tweet_id)
 
 print("{} record(s) affected".format(cursor.rowcount))
 cursor.close()
 twitter_db.close()
-
 
 
