@@ -1,6 +1,7 @@
 from preprocessing import *
 from query_tools import *
 from parsing import *
+from community_graph import *
 
 def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
     '''
