@@ -26,25 +26,5 @@ def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stem
     [vectorizer, words_freq] = build_vectorizer(tweets, stopwords=stopwords, b_stemming=b_stemming, b_lowercase=b_lowercase, b_accent=b_accent, max_f=max_f)
     return vectorizer, words_freq
 
-def save_vectorizer(vectorizer, fname):
-    '''
-        vectorizer : CountVectorizer
-        fname : file name
-        save vectorizer as vectorizers/fname
-    '''
-    f = open("vectorizers/" + fname, "wb")
-    pickle.dump(vectorizer,f)
-    f.close()
-
-def load_vectorizer(vectorizer, fname):
-    '''
-        vectorizer : CountVectorizer
-        fname : file name
-        load vectorizers/fname
-    '''
-    f = open("vectorizers/" + fname, "rb")
-    vectorizer = pickle.load(f)
-    f.close()
-    return vectorizer
 
 

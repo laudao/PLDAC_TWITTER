@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import string
 import unicodedata
 import re
+import pickle
 
 punctuation_dict = {'!': 'single_exl', '!!': 'mult_exl', '?': 'single_int',\
                     '??': 'mult_int', '...': 'susp_pts', '…': 'susp_pts',\
@@ -203,7 +204,7 @@ def save_vectorizer(vectorizer, fname):
     pickle.dump(vectorizer,f)
     f.close()
 
-def load_vectorizer(vectorizer, fname):
+def load_vectorizer(fname):
     '''
         vectorizer : CountVectorizer
         fname : file name
