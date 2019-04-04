@@ -1,5 +1,4 @@
-data/*
+csv/*
 __pycache__/*
-csv/tweets_git.csv
 .ipynb_checkpoints/*
 .DS_Store
