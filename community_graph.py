@@ -1,6 +1,10 @@
 import networkx as nx
 from community import community_louvain
 
+'''
+    implementation from Paul Brodersen, posted on Stackoverflow
+'''
+
 def community_layout(g, partition):
     """
     Compute the layout for a modular graph.

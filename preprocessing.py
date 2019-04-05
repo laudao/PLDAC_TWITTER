@@ -15,7 +15,7 @@ punctuation_dict = {'!': 'single_exl', '!!': 'mult_exl', '?': 'single_int',\
 
 def french_stopwords():
     fr_stopwords = nltk.corpus.stopwords.words('french')
-    fr_stopwords.extend(['de', 'ou', 'sur', 'or', 'ni', 'car', 'quand', 'a', 'mais', 'donc', 'si', 'quel', 'entre', 'tout', 'ce', 'cet', 'ça', 'tous', "c'est", 'faire', 'dans', 'fait'])
+    #fr_stopwords.extend(['de', 'ou', 'sur', 'or', 'ni', 'car', 'quand', 'a', 'mais', 'donc', 'si', 'quel', 'entre', 'tout', 'ce', 'cet', 'ça', 'tous', "c'est", 'faire', 'dans', 'fait'])
     return fr_stopwords
 
 def remove_punctuation(doc):

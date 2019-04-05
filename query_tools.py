@@ -72,4 +72,18 @@ def get_tweets_from_user(user_id, N=None, b_retweet=False):
     cursor.close()
     return np.array(tweet_list)
 
-
+def get_nb_tweets_per_user(users_list):
+    '''
+        users_list : list of user id
+        return a dictionary where each key is a user_id
+            and its corresponding value, the number of tweets he/she tweeted
+    '''
+    nb_tweets_per_user = dict()
+    twitter_db = connect_to_db()
+    for user in users_list:
+        cursor = twitter_db.cursor()
+        query = "SELECT COUNT(*) FROM tweets WHERE user_id = " + str(user)
+        cursor.execute(query)
+        nb_tweets_per_user[user] = cursor.fetchall()[0][0]
+        cursor.close()
+    return nb_tweets_per_user
