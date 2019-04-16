@@ -72,6 +72,40 @@ def get_tweets_from_user(user_id, N=None, b_retweet=False):
     cursor.close()
     return np.array(tweet_list)
 
+def get_tweets_candidates_from_users(users, N=None):
+    '''
+        return a list of tweets from specified users,
+            along with a list of mentioned candidates, for each tweet
+    '''
+    twitter_db = connect_to_db()
+    cursor = twitter_db.cursor()
+
+    if N:
+        limit = " LIMIT " + str(N)
+    else:
+        limit = ""
+
+    query = "SELECT text, candidates\
+            FROM tweets\
+            WHERE lang='fr' AND \
+            (user_id IN " + str(users) + " OR \
+            in_reply_to_user_id IN " + str(users) + " OR \
+            quoted_user_id IN " + str(users) + " OR \
+            retweeted_user_id IN " + str(users) + ")" + limit
+
+    cursor.execute(query)
+
+    tweets = []
+    candidates = []
+    for tweet, cand in cursor:
+        tweets.append(tweet)
+        candidates.append(list(cand)) # string of 0 and 1 -> list of 0 and 1
+    cursor.close()
+
+    # cast to int
+    candidates = np.array(candidates).astype(int)
+    return tweets, candidates
+
 def get_nb_tweets_per_user(users_list):
     '''
         users_list : list of user id

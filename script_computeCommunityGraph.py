@@ -82,11 +82,11 @@ print("Created graph")
 
 i = 1
 # save graph to file
-f = open("communities/graph_" + str(i), "wb")
+f = open("communities/v" + str(i) + "/graph", "wb")
 pickle.dump(G,f)
 f.close()
 
-print("Saved graph to file communities/graph_" + str(i))
+print("Saved graph to file communities/v" + str(i) + "/graph")
 
 G_undirected = nx.Graph(G)
 
@@ -96,26 +96,26 @@ pos = community_layout(G_undirected, partition)
 print("Computed community layout")
 
 # save partition to file
-f = open("communities/partition_" + str(i), "wb")
+f = open("communities/v" + str(i) + "/partition", "wb")
 pickle.dump(partition,f)
 f.close()
 
-print("Saved partition to file communities/partition_" + str(i))
+print("Saved partition to file communities/" + str(i) + "/partition")
 
 # save graph layout to file
-f = open("communities/layout_" + str(i), "wb")
+f = open("communities/v" + str(i) + "/layout", "wb")
 pickle.dump(pos,f)
 f.close()
 
-print("Saved graph layout to file communities/layout_" + str(i))
+print("Saved graph layout to file communities/" + str(i) + "/layout")
 
 # to adjust node size according to corresponding user's number of tweets
 all_users = list(partition.keys())
 nb_tweets_per_user = get_nb_tweets_per_user(all_users)
 
-f = open("communities/nb_tweets_per_user_" + str(i), "wb")
+f = open("communities/v" + str(i) + "/nb_tweets_per_user", "wb")
 pickle.dump(nb_tweets_per_user,f)
 f.close()
 
-print("Saved number of tweets per user to file communities/nb_tweets_per_user_"  + str(i))
+print("Saved number of tweets per user to file communities/v" + str(i) + "/nb_tweets_per_user")
 
