@@ -2,7 +2,7 @@ from utils import *
 import pickle
 
 '''
-    script to save various CountVectorizers, along with their associated word frequencies
+    save various CountVectorizers, along with their associated word frequencies
 '''
 
 tweet_list = get_tweets(N=1000)
