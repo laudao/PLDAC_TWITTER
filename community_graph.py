@@ -2,13 +2,27 @@ import networkx as nx
 from community import community_louvain
 import matplotlib.pyplot as plt
 import numpy as np
+from query_tools import *
 
-def filter_graph(partition, G, node_size, filter):
+def filter_graph_community(partition, G, node_size, filter_community):
     partition_filtered = dict()
     G_filtered = G.copy()
     filtered_node_size = dict()
     for user_id, comm_id in partition.items():
-        if comm_id in filter:
+        if comm_id in filter_community:
+            partition_filtered[user_id] = comm_id
+            filtered_node_size[user_id] = node_size[user_id]
+        else:
+            G_filtered.remove_node(user_id)
+
+    return partition_filtered, G_filtered, filtered_node_size
+
+def filter_graph_users(partition, G, node_size, filter_users):
+    partition_filtered = dict()
+    G_filtered = G.copy()
+    filtered_node_size = dict()
+    for user_id, comm_id in partition.items():
+        if user_id in filter_users:
             partition_filtered[user_id] = comm_id
             filtered_node_size[user_id] = node_size[user_id]
         else:
@@ -26,12 +40,12 @@ def plot_community_graph(G, layout, partition, dict_node_size, fig_size=12, dict
         plot community graph
     '''
     _node_size = np.log(np.array([dict_node_size.get(node) for node in G.nodes()]))
-    dict_edges = dict(G.edges())
-    edge_width = [dict_edges.get(e)['weight'] for e in G.edges()]
-    max_width = max(edge_width)
-    min_width = min(edge_width)
-    edge_width_norm = [(width - min_width) / (max_width - min_width) for width in edge_width]
-    edge_width_norm = [w + 0.001 if w == 0.0 else w for w in edge_width_norm]
+    #dict_edges = dict(G.edges())
+    #edge_width = [dict_edges.get(e)['weight'] for e in G.edges()]
+    #max_width = max(edge_width)
+    #min_width = min(edge_width)
+    #edge_width_norm = [(width - min_width) / (max_width - min_width) for width in edge_width]
+    #edge_width_norm = [w + 0.001 if w == 0.0 else w for w in edge_width_norm]
 
     if dict_node_color is None:
         _node_color=[partition.get(node) for node in G.nodes()]
@@ -39,11 +53,44 @@ def plot_community_graph(G, layout, partition, dict_node_size, fig_size=12, dict
         _node_color=[dict_node_color.get(node) for node in G.nodes()]
 
     plt.figure(figsize=(fig_size, fig_size))
+    #nx.draw_networkx_nodes(G, layout, node_size=_node_size, \
+    #    cmap=plt.cm.RdYlBu, node_color=_node_color)
     nx.draw_networkx_nodes(G, layout, node_size=_node_size, \
-        cmap=plt.cm.RdYlBu, node_color=_node_color)
-    nx.draw_networkx_edges(G, layout, width=edge_width, alpha=0.3)
+        node_color=_node_color)
+   # nx.draw_networkx_edges(G, layout, width=edge_width, alpha=0.3)
+    nx.draw_networkx_edges(G, layout, alpha=0.3)
     plt.axis('off')
     plt.show(G)
+
+def get_nodes_color(nodes):
+    '''
+        nodes : array of users id
+        return dictionary mapping each user in nodes to its color,
+            base on which candidate he mentions the most
+    '''
+    candidates_color_mapping = {
+        0 : "#f58231", # Arthaud -> orange
+        1 : "#808000", # Asselineau -> olive
+        2 : "#9A6324", # Cheminade -> brown
+        3 : "#800000", # Dupont-Aignan -> maroon
+        4 : "green", # Fillon
+        5 : "yellow", # Hamon
+        6 : "magenta", # Lassalle
+        7 : "#000075", # Le Pen -> navy
+        8 : "blue", # Macron
+        9 : "red", # Mélenchon
+        10 : "purple" # Poutou
+    }
+    dict_nodes_color = dict()
+    count = 0
+    for u in nodes:
+        candidates = mentioned_candidates_from_user(u, N=100)
+        dict_nodes_color[u] = candidates_color_mapping[np.argmax(np.sum(candidates, axis=0))]
+        count += 1
+        if count % 100 == 0:
+            print("{} nodes color computed".format(count))
+
+    return dict_nodes_color
 
 '''
     code below is taken from Paul Brodersen's implementation, posted on Stackoverflow
