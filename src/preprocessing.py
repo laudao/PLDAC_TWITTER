@@ -200,7 +200,7 @@ def save_vectorizer(vectorizer, fname):
         fname : file name
         save vectorizer as vectorizers/fname
     '''
-    f = open("vectorizers/" + fname, "wb")
+    f = open("../vectorizers/" + fname, "wb")
     pickle.dump(vectorizer,f)
     f.close()
 
@@ -210,7 +210,7 @@ def load_vectorizer(fname):
         fname : file name
         load vectorizers/fname
     '''
-    f = open("vectorizers/" + fname, "rb")
+    f = open("../vectorizers/" + fname, "rb")
     vectorizer = pickle.load(f)
     f.close()
     return vectorizer
