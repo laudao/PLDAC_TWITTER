@@ -82,7 +82,7 @@ for i in range(k):
 
 # dictionary mapping (if possible) each candidate to its community
 # some candidates are likely to be left with no community, if not mentioned enough times
-candidates_to_community = dict()
+candidate_to_community = dict()
 # 0 if candidate is not mapped to its community, 1 elsewise
 mapped = np.zeros(11)
 
@@ -103,12 +103,12 @@ for i in range(k):
             most mentioned candidate : {}".format(communities_filtered[i], \
             avg, candidates_mapping[cand]))
 
-for k,v in candidates_to_community.items():
+for k,v in candidate_to_community.items():
     print("{} -> community {}".format(candidates_mapping[k], v[0][1]))
 
 
 # save mapping to file
-f = open("../communities/v" + str(version) + "/candidates_to_community", "wb")
+f = open("../communities/v" + str(version) + "/candidate_to_community", "wb")
 pickle.dump(candidates_to_community,f)
 f.close()
 

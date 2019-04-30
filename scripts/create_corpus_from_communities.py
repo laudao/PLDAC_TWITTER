@@ -4,6 +4,22 @@ from utils import *
 import pickle
 import matplotlib.pyplot as plt
 
+"""
+    This script consists of :
+    - cleaning each community i.e. remove users that only retweet or do not sufficiently
+      to the community (in terms of centrality degree)
+    - for each community, retrieving users' tweets in order to create a representative
+      corpus of positive tweets regarding said candidate/negative tweets regarding the
+      others
+    - saving candidate -> users and candidate -> tweets mappings to files
+    - if sys.argv[1] = 1, plotting each community and save it to its respective file
+"""
+
+plot_graphs = False
+
+if len(sys.argv) > 1 and sys.argv[1] == '1':
+    plot_graphs = True
+
 candidates_mapping = {
     0 : "Arthaud",
     1 : "Asselineau",
@@ -18,7 +34,7 @@ candidates_mapping = {
     10 : "Poutou"
 }
 
-candidates_color_mapping = {
+candidate_color_mapping = {
     0 : "#f58231", # Arthaud -> orange
     1 : "#808000", # Asselineau -> olive
     2 : "#9A6324", # Cheminade -> brown
@@ -46,36 +62,27 @@ f = open("../communities/v" + str(version) + "/graph", "rb")
 G = pickle.load(f)
 f.close()
 
-f = open("../communities/v" + str(version) + "/candidates_to_community", "rb")
-candidates_to_community = pickle.load(f)
+f = open("../communities/v" + str(version) + "/candidate_to_community", "rb")
+candidate_to_community = pickle.load(f)
 f.close()
 
-# sort communities in descending order with respect to the number of users they contain
-sorted_communities = [(v[0][1], len(v)) for k,v in candidates_to_community.items()]
-sorted_communities.sort(key=lambda x: x[1],reverse=True)
-
 # dictionary mapping each candidate to the users that support them
-candidates_to_users = dict()
+candidate_to_users = dict()
 
 # remove users that only retweet
-for cand, community in candidates_to_community.items():
+for cand, community in candidate_to_community.items():
     users = community[:,0]
     nb_retweets_per_user = get_ratio_retweets_per_user(users)
     nb_retweets_per_user = np.array([(user, ratio) for user, ratio in nb_retweets_per_user.items()])
     to_keep = nb_retweets_per_user[np.where(nb_retweets_per_user[:,1] < 1)][:,0]
-    candidates_to_users[cand] = to_keep
+    candidate_to_users[cand] = to_keep
     print("{} - number of bots among {} users : {}".format(candidates_mapping[cand], len(users),\
                                                            len(users) - len(to_keep)))
-
-# save mapping to file
-f = open("../communities/v" + str(version) + "/candidates_to_users", "wb")
-pickle.dump(candidates_to_users,f)
-f.close()
 
 # dictionary mapping each candidate to their representative tweets
 corpus = dict()
 
-for cand, users in candidates_to_users.items():
+for cand, users in candidate_to_users.items():
     print(cand)
     fname = "../communities/v" + str(version) + "/plot_community_" + candidates_mapping[cand]
     partition_cand, G_cand, nb_tweets_cand = filter_graph_users(partition, \
@@ -86,14 +93,20 @@ for cand, users in candidates_to_users.items():
     dict_centrality_filtered = {k:v for k,v in dict_centrality.items() if v > 0.005}
     users_to_keep = list(dict_centrality_filtered.keys())
 
-    users_color = get_nodes_color(users_to_keep)
+    # update community
+    candidate_to_users[cand] = users_to_keep
 
-    partition_cand, G_cand, nb_tweets_cand = filter_graph_users(partition, \
-            G, nb_tweets_per_user, users_to_keep)
-    pos_cand = community_layout(G_cand, partition_cand)
-    plot_community_graph(G_cand, pos_cand, partition_cand, nb_tweets_cand, \
-            dict_node_color=users_color, filename=fname)
+    if plot_graphs:
+        users_color = get_nodes_color(users_to_keep)
 
+        partition_cand, G_cand, nb_tweets_cand = filter_graph_users(partition, \
+                G, nb_tweets_per_user, users_to_keep)
+        pos_cand = community_layout(G_cand, partition_cand)
+        # save plot
+        plot_community_graph(G_cand, pos_cand, partition_cand, nb_tweets_cand, \
+                dict_node_color=users_color, filename=fname)
+
+    # get 10 tweets from each user
     tweets = []
     for user in users_to_keep:
         tweets = np.append(tweets, get_tweets_from_user(user, N=10))
@@ -101,12 +114,20 @@ for cand, users in candidates_to_users.items():
 
     print("Computed corpus for {}".format(candidates_mapping[cand]))
 
-# save mapping to file
-f = open("../communities/v" + str(version) + "/corpus", "wb")
+# save updated candidate -> users mapping to file
+f = open("../communities/v" + str(version) + "/candidate_to_users", "wb")
+pickle.dump(candidate_to_users,f)
+f.close()
+
+print("Saved dictionary mapping candidates to their representative users in file communities/v" \
+        + str(version) + "/candidate_to_users")
+
+# save candidate -> tweets to file
+f = open("../communities/v" + str(version) + "/candidate_to_tweets", "wb")
 pickle.dump(corpus,f)
 f.close()
 
 print("Saved dictionary mapping candidates to their tweets in file communities/v" \
-        + str(version) + "/corpus")
+        + str(version) + "/candidate_to_tweets")
 
 
