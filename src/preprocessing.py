@@ -105,7 +105,7 @@ def stem_words(doc):
 def remove_numbers(docs):
     return np.array([re.sub('(?<!\w)[\d]+(?!\w)', '',doc) for doc in docs])
 
-def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_features=None, b_rmnumbers=False, min_df=1, max_df=1.0):
+def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, b_rmaccent=False, max_features=None, b_rmnumbers=False, min_df=1, max_df=1.0,n=(1,1)):
     '''
         docs : list of documents
         stopwords : list of stopwords (None if stopwords are to be kept)
@@ -117,6 +117,8 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, 
             that have a document frequency strictly lower than this threshold
         max_df : float in [0,1] - when building the vocabulary, ignore terms that
             have a document frequency strictly higher than this threshold
+        n : The lower and upper boundary of the range of n-values 
+                                    for different n-grams to be extracted
         build and return a vectorizer given the above parameters
             along with the document-term matrix representation of the tweets
     '''
@@ -166,7 +168,7 @@ def build_vectorizer(docs, stopwords=None, b_stemming=False, b_lowercase=False, 
     if not (max_features is None):
         print("Keeping the top {} occurring tokens".format(max_features))
 
-    vectorizer = CountVectorizer(preprocessor=preprocessor_, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_features, min_df=min_df, max_df=max_df)
+    vectorizer = CountVectorizer(preprocessor=preprocessor_, stop_words=stopwords, tokenizer=tokenizer_, max_features=max_features, min_df=min_df, max_df=max_df,ngram_range=n)
     X = vectorizer.fit_transform(docs.astype('U'))
 
     return vectorizer, X
