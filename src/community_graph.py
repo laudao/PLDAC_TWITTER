@@ -30,6 +30,11 @@ def filter_graph_users(partition, G, node_size, filter_users):
 
     return partition_filtered, G_filtered, filtered_node_size
 
+def save_hist(data, filename, fig_size=12):
+    plt.figure(figsize=(fig_size, fig_size))
+    h = plt.hist(data)
+    plt.savefig(filename)
+
 def plot_community_graph(G, layout, partition, dict_node_size, fig_size=12, dict_node_color=None, filename=None):
     '''
         G : community graph to plot
@@ -41,12 +46,6 @@ def plot_community_graph(G, layout, partition, dict_node_size, fig_size=12, dict
         plot community graph
     '''
     _node_size = np.log(np.array([dict_node_size.get(node) for node in G.nodes()]))
-    #dict_edges = dict(G.edges())
-    #edge_width = [dict_edges.get(e)['weight'] for e in G.edges()]
-    #max_width = max(edge_width)
-    #min_width = min(edge_width)
-    #edge_width_norm = [(width - min_width) / (max_width - min_width) for width in edge_width]
-    #edge_width_norm = [w + 0.001 if w == 0.0 else w for w in edge_width_norm]
 
     if dict_node_color is None:
         _node_color=[partition.get(node) for node in G.nodes()]
@@ -54,14 +53,10 @@ def plot_community_graph(G, layout, partition, dict_node_size, fig_size=12, dict
         _node_color=[dict_node_color.get(node) for node in G.nodes()]
 
     plt.figure(figsize=(fig_size, fig_size))
-    #nx.draw_networkx_nodes(G, layout, node_size=_node_size, \
-    #    cmap=plt.cm.RdYlBu, node_color=_node_color)
     nx.draw_networkx_nodes(G, layout, node_size=_node_size, \
         node_color=_node_color)
-   # nx.draw_networkx_edges(G, layout, width=edge_width, alpha=0.3)
     nx.draw_networkx_edges(G, layout, alpha=0.3)
     plt.axis('off')
-    #plt.show(G)
 
     if not filename is None:
         plt.savefig(filename)

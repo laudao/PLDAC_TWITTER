@@ -92,7 +92,7 @@ for i in range(k):
     # compute average number of tweets among this community
     avg = np.mean(nb_tweets_filtered_array[np.where(np.in1d(nb_tweets_filtered_array[:,0],\
             users))][:,1])
-    candidates = mentioned_candidates_from_mult_users(tuple(users),10000)
+    candidates = mentioned_candidates_from_mult_users(tuple(users),10000,keep_retweets=True)
     cand = np.argmax(np.sum(candidates, axis=0))
 
     if mapped[cand] == 0:
