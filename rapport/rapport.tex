@@ -161,9 +161,23 @@ communautés comparée à celle des arêtes reliant les communautés entre elles
 La \figref{img:communautes-total} contient le graphe de communautés construit à
 partir d'un échantillon de 10000 tweets. Cette partition contient plus de 700
 communautés, et nombreuses sont celles ne contenant très peu d'utilisateurs
-(moins de 100) pour être significatives : nous 
+(moins de 100) pour être significatives.
 
-Nous décidons donc de garder uniquement les communautés de plus de 100 nœuds.
+Nous décidons donc de garder uniquement les communautés de plus de 100 nœuds. La
+figure \figref{img:communautes-12} contient les 12 plus grandes communautés de
+la partition.
+
+\begin{figure}[H]
+	\center 
+	\includegraphics[width=0.9\textwidth]{images/analyse_communautes/communautes_12.png}
+    \caption{Graphe contenant uniquement les 12 plus grandes communautes}
+    \label{img:communautes-12}
+\end{figure}
+
+Nous enlevons en plus les nœuds correspondant aux utilisateurs ne faisant que
+retweeter - et qui sont donc possiblement des bots - ainsi que ceux ne faisant
+pas suffisamment partie de leur communauté.
+
 
 
 

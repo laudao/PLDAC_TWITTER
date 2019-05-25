@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.24)  25 MAY 2019 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.24)  25 MAY 2019 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1571,19 +1571,28 @@ been already used, duplicate ignored
                    \relax 
 l.128 \newpage
                [1] [2] [3]
-<images/analyse_communautes/communautes_total.png, id=63, 736.7525pt x 598.235p
+<images/analyse_communautes/communautes_total.png, id=62, 736.7525pt x 598.235p
 t>
 File: images/analyse_communautes/communautes_total.png Graphic file (type png)
  <use images/analyse_communautes/communautes_total.png>
 Package pdftex.def Info: images/analyse_communautes/communautes_total.png used 
-on input line 157.
+on input line 156.
 (pdftex.def)             Requested size: 384.1096pt x 311.88728pt.
- [4 <./images/analyse_communautes/communautes_total.png>] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
+
+<images/analyse_communautes/communautes_12.png, id=65, 867.24pt x 867.24pt>
+File: images/analyse_communautes/communautes_12.png Graphic file (type png)
+
+<use images/analyse_communautes/communautes_12.png>
+Package pdftex.def Info: images/analyse_communautes/communautes_12.png used on 
+input line 172.
+(pdftex.def)             Requested size: 384.1096pt x 384.11429pt.
+ [4 <./images/analyse_communautes/communautes_total.png>] [5 <./images/analyse_
+communautes/communautes_12.png>] [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 4C5CE8F862E4BC3B4B0B60AB49A23327;281.
 
@@ -1593,13 +1602,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package logreq Info: Writing requests to 'rapport.run.xml'.
 \openout1 = `rapport.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  ) 
 Here is how much of TeX's memory you used:
- 28674 strings out of 492995
- 515256 string characters out of 6132704
- 953269 words of memory out of 5000000
- 31753 multiletter control sequences out of 15000+600000
+ 28682 strings out of 492995
+ 515515 string characters out of 6132704
+ 953359 words of memory out of 5000000
+ 31758 multiletter control sequences out of 15000+600000
  15384 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,6n,77p,943b,1629s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1614,10 +1623,10 @@ texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on rapport.pdf (7 pages, 464331 bytes).
+Output written on rapport.pdf (8 pages, 1005862 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

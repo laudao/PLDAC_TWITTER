@@ -8,6 +8,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Analyse de communaut\IeC {\'e}s}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Fusion des deux approches}{5}{section.4}
+\contentsline {section}{\numberline {4}Fusion des deux approches}{6}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{6}{section.5}
+\contentsline {section}{\numberline {5}Conclusion}{7}{section.5}

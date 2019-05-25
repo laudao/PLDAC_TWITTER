@@ -1,4 +1,5 @@
 csv/*
 src/__pycache__/*
 .ipynb_checkpoints/*
+rapport/*
 .DS_Store
