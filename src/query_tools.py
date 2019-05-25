@@ -208,6 +208,11 @@ def mentioned_candidates_from_mult_users(users, N=None, keep_retweets=False):
             quoted_user_id IN " + str(users) + " OR \
             retweeted_user_id IN " + str(users) + ")" + limit
 
+    #query = "SELECT candidates\
+    #        FROM tweets\
+    #        WHERE lang='fr' " + s_remove_retweets + "AND \
+    #        user_id IN " + str(users) + limit
+
     cursor.execute(query)
 
     #tweets = []

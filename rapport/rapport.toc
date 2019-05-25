@@ -1,0 +1,13 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {french}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Analyse de sentiments et transfert}{3}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Analyse de communaut\IeC {\'e}s}{4}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Fusion des deux approches}{5}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{6}{section.5}
