@@ -30,35 +30,7 @@ if len(sys.argv) > 1:
         plot_graphs = True
         plot_hists = True
 
-candidates_mapping = {
-    0 : "Arthaud",
-    1 : "Asselineau",
-    2 : "Cheminade",
-    3 : "Dupont-Aignan",
-    4 : "Fillon",
-    5 : "Hamon",
-    6 : "Lassalle",
-    7 : "Le Pen",
-    8 : "Macron",
-    9 : "Mélenchon",
-    10 : "Poutou"
-}
-
-candidate_color_mapping = {
-    0 : "#f58231", # Arthaud -> orange
-    1 : "#808000", # Asselineau -> olive
-    2 : "#9A6324", # Cheminade -> brown
-    3 : "#800000", # Dupont-Aignan -> maroon
-    4 : "green", # Fillon
-    5 : "yellow", # Hamon
-    6 : "magenta", # Lassalle
-    7 : "#000075", # Le Pen -> navy
-    8 : "blue", # Macron
-    9 : "red", # Mélenchon
-    10 : "purple" # Poutou
-}
-
-VERSION = 1
+VERSION = 2
 CENTRALITY_THRESHOLD = 0.005
 
 f = open("../communities/v" + str(VERSION) + "/partition", "rb")

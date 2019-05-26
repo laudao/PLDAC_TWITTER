@@ -8,7 +8,7 @@ from collections import Counter
 ####################################################################################
 ####    Link each community with at least more than 100 nodes to its candidate   ###
 ###################################################################################
-version = 1
+version = 2
 
 candidates_mapping = {
     0 : "Arthaud",
@@ -96,7 +96,7 @@ for i in range(k):
     cand = np.argmax(np.sum(candidates, axis=0))
 
     if mapped[cand] == 0:
-        candidates_to_community[cand] = communities[i]
+        candidate_to_community[cand] = communities[i]
         mapped[cand] = 1
 
     print("Community {} - average number of tweets per user : {} - \
@@ -109,9 +109,9 @@ for k,v in candidate_to_community.items():
 
 # save mapping to file
 f = open("../communities/v" + str(version) + "/candidate_to_community", "wb")
-pickle.dump(candidates_to_community,f)
+pickle.dump(candidate_to_community,f)
 f.close()
 
 print("Saved dictionary mapping candidates to their community in file communities/v" \
-        + str(version) + "/candidates_to_community")
+        + str(version) + "/candidate_to_community")
 

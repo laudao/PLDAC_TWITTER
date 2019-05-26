@@ -2,29 +2,35 @@ from preprocessing import *
 from query_tools import *
 from parsing import *
 from community_graph import *
+import pickle
 
-def build_vectorizer_from_tweets(N=None, b_retweet=False, stopwords=None, b_stemming=False, b_lowercase=True,b_punctuation=False, b_accent=True, max_f=None):
-    '''
-        N : tweets limit
-        b_retweet : True if retweets are to be kept
-        stopwords : list of stopwords (None if stopwords are to be kept)
-        b_stemming : boolean indicating whether to stem words
-        b_lowercase : boolean indicating whether to lowercase words
-        b_punctuation : boolean indicating whether to keep punctuation
-        b_accent : boolean indicating whether to keep accents
-        max_f : maximum number of top occurring tokens to select
-        get the N first tweets in the database,
-            build and return a vectorizer given the above parameters
-            along with a list of tuples containing the words and
-            their occurrences in the tweets
-    '''
-    if b_punctuation:
-        tweets = get_tweets(N, b_retweet=b_retweet)
-    else:
-        tweets = get_tweets(N, b_retweet=b_retweet, b_punctuation=False)
+candidates_mapping = {
+    0 : "Arthaud",
+    1 : "Asselineau",
+    2 : "Cheminade",
+    3 : "Dupont-Aignan",
+    4 : "Fillon",
+    5 : "Hamon",
+    6 : "Lassalle",
+    7 : "Le Pen",
+    8 : "Macron",
+    9 : "Mélenchon",
+    10 : "Poutou"
+}
 
-    [vectorizer, words_freq] = build_vectorizer(tweets, stopwords=stopwords, b_stemming=b_stemming, b_lowercase=b_lowercase, b_accent=b_accent, max_f=max_f)
-    return vectorizer, words_freq
+candidate_color_mapping = {
+    0 : "#f58231", # Arthaud -> orange
+    1 : "#808000", # Asselineau -> olive
+    2 : "#9A6324", # Cheminade -> brown
+    3 : "#800000", # Dupont-Aignan -> maroon
+    4 : "green", # Fillon
+    5 : "yellow", # Hamon
+    6 : "magenta", # Lassalle
+    7 : "#000075", # Le Pen -> navy
+    8 : "blue", # Macron
+    9 : "red", # Mélenchon
+    10 : "purple" # Poutou
+}
 
 def get_ratio_retweets_per_user(users_list):
     ratio_per_user = dict()
@@ -36,6 +42,23 @@ def get_ratio_retweets_per_user(users_list):
             ratio_per_user[user] = nb_retweets_per_user[user] * 1.0 / nb
 
     return ratio_per_user
+
+def save_object(obj, filename):
+    '''
+        saves object to file
+
+        parameters
+        ----------
+        obj : Object
+              any kind of pickeable object
+        filename : string
+                   file name where object is to be stored
+    '''
+    f = open(filename, 'wb')
+    pickle.dump(obj, f)
+    f.close()
+    print("Saved object to file {}".format(filename))
+
 
 
 

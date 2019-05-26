@@ -4,6 +4,87 @@ import matplotlib.pyplot as plt
 import numpy as np
 from query_tools import *
 
+def create_graph(N):
+    '''
+        create a graph based on users involved in the first N tweets
+
+        parameters
+        ----------
+        N : int
+            number of tweets to sample
+        returns
+        -------
+        G_dict : dict of int -> (dict of string -> (dict of int -> int))
+                mapping each user id to a dictionary
+                where each key is a type of interaction and each value is a
+                dictionary linking each user he interacted with to their
+                number of interactions
+        G : networkx.DiGraph
+            corresponding graph
+    '''
+    twitter_db = connect_to_db()
+    cursor = twitter_db.cursor()
+
+
+    # get users involved in N first tweets
+    query = ("SELECT t1.user_id, t1.in_reply_to_user_id, t1.quoted_user_id, t1.retweeted_user_id \
+            FROM tweets t1\
+            WHERE lang='fr' AND \
+            ((NOT (t1.text LIKE '%RT @%')) OR \
+            (t1.text LIKE '%RT @%' AND \
+                EXISTS \
+                    (SELECT * \
+                    FROM tweets t2 \
+                    WHERE t2.user_id = t1.user_id AND NOT (t2.text LIKE '%RT @%')\
+                    )\
+            )\
+            )\
+            LIMIT " + str(N))
+    cursor.execute(query)
+
+    G_dict = dict()
+    for (user_id, in_reply_to_user_id, quoted_user_id, retweeted_user_id) in cursor:
+        if user_id not in G_dict:
+            G_dict[user_id] = {'replied_to': {}, 'quoted': {}, 'retweeted': {}}
+
+        if not(in_reply_to_user_id is None):
+            if in_reply_to_user_id not in G_dict:
+                G_dict[in_reply_to_user_id] = {'replied_to': {}, 'quoted': {}, 'retweeted': {}}
+            if in_reply_to_user_id not in G_dict[user_id]['replied_to']:
+                G_dict[user_id]['replied_to'][in_reply_to_user_id] = 1
+            else:
+                G_dict[user_id]['replied_to'][in_reply_to_user_id] += 1
+
+        if not(quoted_user_id is None):
+            if quoted_user_id not in G_dict:
+                G_dict[quoted_user_id] = {'replied_to': {}, 'quoted': {}, 'retweeted': {}}
+            if quoted_user_id not in G_dict[user_id]['quoted']:
+                G_dict[user_id]['quoted'][quoted_user_id] = 1
+            else:
+                G_dict[user_id]['quoted'][quoted_user_id] += 1
+
+        if not(retweeted_user_id is None):
+            if retweeted_user_id not in G_dict:
+                G_dict[retweeted_user_id] = {'replied_to': {}, 'quoted': {}, 'retweeted': {}}
+            if retweeted_user_id not in G_dict[user_id]['retweeted']:
+                G_dict[user_id]['retweeted'][retweeted_user_id] = 1
+            else:
+                G_dict[user_id]['retweeted'][retweeted_user_id] += 1
+    cursor.close()
+
+    G = nx.DiGraph()
+    G.add_nodes_from(G_dict.keys())
+
+    for (u1,v) in G_dict.items():
+        for (u2, count) in v['quoted'].items():
+            G.add_edge(u1,u2,label='quoted',weight=count)
+        for (u2, count) in v['replied_to'].items():
+            G.add_edge(u1,u2,label='replied_to',weight=count)
+        for (u2, count) in v['retweeted'].items():
+            G.add_edge(u1,u2,label='retweeted',weight=count)
+
+    return G_dict, G
+
 def filter_graph_community(partition, G, node_size, filter_community):
     partition_filtered = dict()
     G_filtered = G.copy()
